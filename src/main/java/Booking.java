@@ -2,14 +2,14 @@ public class Booking {
     private Integer bookId;
     private Boolean checkedIn;
     private Flight flight;
-    private Baggage baggage;
+    private BaggageSize baggageSize;
     private Passenger passenger;
 
-    public Booking(Integer bookId, Boolean checkedIn, Flight flight, Baggage baggage, Passenger passenger) {
+    public Booking(Integer bookId, Boolean checkedIn, Flight flight, BaggageSize baggageSize, Passenger passenger) {
         this.bookId = bookId;
         this.checkedIn = checkedIn;
         this.flight = flight;
-        this.baggage = baggage;
+        this.baggageSize = baggageSize;
         this.passenger = passenger;
     }
 
@@ -37,12 +37,12 @@ public class Booking {
         this.flight = flight;
     }
 
-    public Baggage getBaggage() {
-        return baggage;
+    public BaggageSize getBaggageSize() {
+        return baggageSize;
     }
 
-    public void setBaggage(Baggage baggage) {
-        this.baggage = baggage;
+    public void setBaggageSize(BaggageSize baggageSize) {
+        this.baggageSize = baggageSize;
     }
 
     public Passenger getPassenger() {

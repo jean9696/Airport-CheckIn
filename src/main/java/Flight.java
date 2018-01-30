@@ -3,15 +3,18 @@ public class Flight {
     private String destinationAirport;
     private String carrier;
     private Integer passengerCapacity;
-    private Baggage baggage;
+    private BaggageSize baggageCapacity;
+    private BaggageSize baggageRegistered;
 
-    public Flight(String flightCode, String destinationAirport, String carrier, Integer passengerCapacity, Baggage baggage) {
+    public Flight(String flightCode, String destinationAirport, String carrier, Integer passengerCapacity, BaggageSize baggageCapacity) {
         this.flightCode = flightCode;
         this.destinationAirport = destinationAirport;
         this.carrier = carrier;
         this.passengerCapacity = passengerCapacity;
-        this.baggage = baggage;
+        this.baggageCapacity = baggageCapacity;
+        this.baggageRegistered = new BaggageSize(0, 0);
     }
+
 
     public String getFlightCode() {
         return flightCode;
@@ -45,11 +48,19 @@ public class Flight {
         this.passengerCapacity = passengerCapacity;
     }
 
-    public Baggage getBaggage() {
-        return baggage;
+    public BaggageSize getBaggageCapacity() {
+        return baggageCapacity;
     }
 
-    public void setBaggage(Baggage baggage) {
-        this.baggage = baggage;
+    public void setBaggageCapacity(BaggageSize baggageCapacity) {
+        this.baggageCapacity = baggageCapacity;
+    }
+
+    public BaggageSize getBaggageRegistered() {
+        return baggageRegistered;
+    }
+
+    public void setBaggageRegistered(BaggageSize baggageRegistered) {
+        this.baggageRegistered = baggageRegistered;
     }
 }

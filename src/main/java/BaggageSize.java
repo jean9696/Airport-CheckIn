@@ -1,8 +1,8 @@
-public class Baggage {
+public class BaggageSize {
     private Integer weight;
     private Integer volume;
 
-    public Baggage(Integer weight, Integer volume) {
+    public BaggageSize(Integer weight, Integer volume) {
         this.weight = weight;
         this.volume = volume;
     }
