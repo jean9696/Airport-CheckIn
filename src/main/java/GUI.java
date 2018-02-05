@@ -1,14 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
-public class GUI extends JFrame implements ActionListener {
+public class GUI extends JFrame {
 
-	JTextField lastNameInput, surnameInput, bookingReferenceInput, baggageVolumeInput, baggageWeightInput;
-	JButton addButton;
-	JTextArea messageArea;
-	
+	private JTextField lastNameInput, surnameInput, bookingReferenceInput, baggageVolumeInput, baggageWeightInput;
+	private JButton addButton;
+	private JTextArea messageArea;
+
 	public GUI () {
 		
 		// set up the title of the window
@@ -84,8 +84,7 @@ public class GUI extends JFrame implements ActionListener {
 		
 		addButton = new JButton("Add");
 		southPanel.add(addButton);		
-		addButton.addActionListener(this);
-		
+
 		messageArea = new JTextArea(10, 30);
 		messageArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
 		messageArea.setEditable(false);
@@ -94,11 +93,53 @@ public class GUI extends JFrame implements ActionListener {
 		this.add(southPanel, BorderLayout.SOUTH);
 	}
 
+    public String getLastNameInput() {
+        return lastNameInput.getText();
+    }
 
+    public String getSurnameInput() {
+        return surnameInput.getText();
+    }
 
+    public String getBookingReferenceInput() {
+        return bookingReferenceInput.getText();
+    }
 
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+    public Integer getBaggageVolumeInput() {
+        return convertJTextStringToInt(baggageVolumeInput.getText());
+    }
+
+    public Integer getBaggageWeightInput() {
+        return convertJTextStringToInt(baggageWeightInput.getText());
+    }
+
+    public void setMessage(String message) {
+        messageArea.setText(message);
+    }
+
+    public void clear() {
+	    messageArea.setText("");
+        lastNameInput.setText("");
+        surnameInput.setText("");
+        bookingReferenceInput.setText("");
+        baggageVolumeInput.setText("");
+        baggageWeightInput.setText("");
+    }
+
+	public void setOnConfirm(ActionListener onConfirm) {
+        addButton.addActionListener(onConfirm);
+    }
+
+    private Integer convertJTextStringToInt(String text) {
+	    try {
+	        return Integer.parseInt(text);
+        } catch (java.lang.NumberFormatException e) {
+            return null;
+        }
+    }
+
+    public void close() {
+        this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+    }
+
 }

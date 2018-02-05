@@ -52,4 +52,8 @@ public class Booking {
     public void setPassenger(Passenger passenger) {
         this.passenger = passenger;
     }
+
+    public Boolean canPassengerAccess(String surname, String lastname) {
+        return surname.equals(passenger.getSurname()) && lastname.equals(passenger.getLastname());
+    }
 }
