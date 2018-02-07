@@ -32,35 +32,35 @@ public class GUI extends JFrame implements ActionListener {
 		JPanel surnamePanel = new JPanel();
 		surnamePanel.setLayout(new GridLayout(1,2));
 		surnamePanel.add(new JLabel("Surname"));
-		surnameInput = new JTextField(30);
+		surnameInput = new JTextField(15);
 		surnamePanel.add(surnameInput);
 		
 		//Set up the 2nd line for the last name
 		JPanel lastNamePanel = new JPanel();
 		lastNamePanel.setLayout(new GridLayout(1,2));
 		lastNamePanel.add(new JLabel("Last name"));
-		lastNameInput = new JTextField(30);
+		lastNameInput = new JTextField(15);
 		lastNamePanel.add(lastNameInput);
 		
 		//Set up the 3rd line for the booking reference
 		JPanel bookingRefPanel = new JPanel();
 		bookingRefPanel.setLayout(new GridLayout(1,2));
 		bookingRefPanel.add(new JLabel("Booking ref. code"));
-		bookingReferenceInput = new JTextField(30);
+		bookingReferenceInput = new JTextField(15);
 		bookingRefPanel.add(bookingReferenceInput);
 		
 		//Set up the 4th line for the baggage's volume
 		JPanel volumePanel = new JPanel();
 		volumePanel.setLayout(new GridLayout(1,2));
 		volumePanel.add(new JLabel("Volume (in litre)"));
-		baggageVolumeInput = new JTextField(30);
+		baggageVolumeInput = new JTextField(15);
 		volumePanel.add(baggageVolumeInput);
 		
 		//Set up the 5th line for the baggage's weight
 		JPanel weightPanel = new JPanel();
 		weightPanel.setLayout(new GridLayout(1,2));
 		weightPanel.add(new JLabel("Weight (in kgs)"));
-		baggageWeightInput = new JTextField(30);
+		baggageWeightInput = new JTextField(15);
 		weightPanel.add(baggageWeightInput);
 		
 		//Set up the whole north panel
@@ -85,7 +85,7 @@ public class GUI extends JFrame implements ActionListener {
 		southPanel.add(addButton);		
 		addButton.addActionListener(this);
 		
-		messageArea = new JTextArea(10, 30);
+		messageArea = new JTextArea(5, 5);
 		messageArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
 		messageArea.setEditable(false);
 		southPanel.add(messageArea);
