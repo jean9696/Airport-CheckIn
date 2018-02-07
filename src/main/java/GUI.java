@@ -16,6 +16,7 @@ public class GUI extends JFrame {
 
 		// call the two functions that set up the GUI
 		setupNorthPanel();
+		setupCenterPanel();
 		setupSouthPanel();
 
 		//setDefaultCloseOperation(this.DO_NOTHING_ON_CLOSE);
@@ -27,6 +28,9 @@ public class GUI extends JFrame {
 	}
 
 
+	/**
+	 * Set up the 5 input fields
+	 */
 	private void setupNorthPanel() {
 
 		//Set up the 1st line for the surname
@@ -61,12 +65,12 @@ public class GUI extends JFrame {
 		JPanel weightPanel = new JPanel();
 		weightPanel.setLayout(new GridLayout(1,2));
 		weightPanel.add(new JLabel("Weight (in kgs)"));
-		baggageWeightInput = new JTextField(30);
+		baggageWeightInput = new JTextField(15);
 		weightPanel.add(baggageWeightInput);
 
 		//Set up the whole north panel
 		JPanel northPanel = new JPanel();
-		northPanel.setLayout(new GridLayout(4,2));
+		northPanel.setLayout(new GridLayout(5,1));
 		northPanel.add(surnamePanel);
 		northPanel.add(lastNamePanel);
 		northPanel.add(bookingRefPanel);
@@ -77,18 +81,31 @@ public class GUI extends JFrame {
 
 	}
 
+	/**
+	 * Set up the center panel for the text area
+	 */
+	private void setupCenterPanel() {
+		JPanel centerPanel = new JPanel();
+		centerPanel.setLayout(new GridLayout(1,1));
+		
+		messageArea = new JTextArea(2, 1);
+		messageArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
+		messageArea.setEditable(false);
+		centerPanel.add(messageArea);
+		
+		this.add(centerPanel, BorderLayout.CENTER);
+	}
+	
+	/**
+	 * Set up the south panel for the button
+	 */
 	private void setupSouthPanel() {
 
 		JPanel southPanel = new JPanel();
-		southPanel.setLayout(new GridLayout(2,1));
+		southPanel.setLayout(new GridLayout(1,1));
 
 		addButton = new JButton("Add");
-		southPanel.add(addButton);
-
-		messageArea = new JTextArea(5, 5);
-		messageArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
-		messageArea.setEditable(false);
-		southPanel.add(messageArea);
+		southPanel.add(addButton);		
 
 		this.add(southPanel, BorderLayout.SOUTH);
 	}
@@ -134,7 +151,7 @@ public class GUI extends JFrame {
 	    try {
 	        return Integer.parseInt(text);
         } catch (java.lang.NumberFormatException e) {
-            return null;
+            return null; //we should ad an error message ?
         }
     }
 
