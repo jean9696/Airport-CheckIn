@@ -130,7 +130,7 @@ public class GUI extends JFrame {
         addButton.addActionListener(onConfirm);
     }
 
-    private Integer convertJTextStringToInt(String text) {
+    protected Integer convertJTextStringToInt(String text) {
 	    try {
 	        return Integer.parseInt(text);
         } catch (java.lang.NumberFormatException e) {
