@@ -1,0 +1,23 @@
+{
+  "flights": [
+    {
+      "Flight Code": "XYZ789",
+      "Destination Airport": "Paris",
+      "Carrier": "AirFrance",
+      "Maximum Passengers": "100",
+      "Maximum Baggage Weight": "500",
+      "Maximum Baggage Volume": "15000"
+      }
+    },
+    {
+      "Flight Code": "ABC123",
+      "Destination Airport": "Copenhagen",
+      "Carrier": "SAS",
+      "Maximum Passengers": "200",
+      "Maximum Baggage Weight": "1000",
+      "Maximum Baggage Volume": "30000"
+      }
+    }
+  ]
+}
+

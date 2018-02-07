@@ -1,0 +1,20 @@
+{
+  "flights": [
+    {
+      "Passenger Name": "Bob Bobson",
+      "Booking Reference Code": "ABC123",
+      "Flight Code": "789",
+      "Checked In": "True",
+      "Baggage Volume": "1",
+      "Baggage Weight": "2"
+    },
+    {
+      "Passenger Name": "Jim Johnson",
+      "Booking Reference Code": "XYZ123"
+      "Flight Code": "789",
+      "Checked In": "False",
+      "Baggage Volume": "2",
+      "Baggage Weight": "4"
+    }
+  ]
+}
