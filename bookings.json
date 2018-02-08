@@ -1,8 +1,8 @@
-{
-  "flights": [
+[
     {
       "Passenger Name": "Bob Bobson",
-      "Booking Reference Code": "ABC123",
+      "Passenger Age": 13,
+      "Booking Reference Code": "123",
       "Flight Code": "789",
       "Checked In": "True",
       "Baggage Volume": "1",
@@ -10,11 +10,11 @@
     },
     {
       "Passenger Name": "Jim Johnson",
-      "Booking Reference Code": "XYZ123"
+      "Passenger Age": "99",
+      "Booking Reference Code": "456",
       "Flight Code": "789",
       "Checked In": "False",
       "Baggage Volume": "2",
       "Baggage Weight": "4"
     }
-  ]
-}
+]
