@@ -34,4 +34,5 @@ public class BaggageSize {
     public Boolean isOverCapacity(BaggageSize refBaggage) {
         return this.isOverWeight(refBaggage) || this.isOverVolume(refBaggage);
     }
+
 }
