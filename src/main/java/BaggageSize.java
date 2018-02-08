@@ -22,4 +22,16 @@ public class BaggageSize {
     public void setVolume(Integer volume) {
         this.volume = volume;
     }
+
+    public Boolean isOverWeight(BaggageSize refBaggage) {
+        return refBaggage.getWeight() < this.weight;
+    }
+
+    public Boolean isOverVolume(BaggageSize refBaggage) {
+        return refBaggage.getVolume() < this.volume;
+    }
+
+    public Boolean isOverCapacity(BaggageSize refBaggage) {
+        return this.isOverWeight(refBaggage) || this.isOverVolume(refBaggage);
+    }
 }

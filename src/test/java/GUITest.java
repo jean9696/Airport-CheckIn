@@ -12,12 +12,12 @@ import static junit.framework.Assert.assertEquals;
 public class GUITest { 
 
 
-@Test
-public void convertJTextStringToInt() {
-    GUI GUI = new GUI();
-    assertEquals(GUI.convertJTextStringToInt(""),  null);
-    assertEquals(GUI.convertJTextStringToInt("0"),  new Integer(0));
-    assertEquals(GUI.convertJTextStringToInt("test"),  null);
-}
+    @Test
+    public void convertJTextStringToInt() {
+        GUI GUI = new GUI();
+        assertEquals(GUI.convertJTextStringToInt(""),  null);
+        assertEquals(GUI.convertJTextStringToInt("0"),  new Integer(0));
+        assertEquals(GUI.convertJTextStringToInt("test"),  null);
+    }
 
 } 

@@ -54,6 +54,6 @@ public class Booking {
     }
 
     public Boolean canPassengerAccess(String surname, String lastname) {
-        return surname.equals(passenger.getSurname()) && lastname.equals(passenger.getLastname());
+        return surname.toLowerCase().equals(passenger.getSurname().toLowerCase()) && lastname.toLowerCase().equals(passenger.getLastname().toLowerCase());
     }
 }

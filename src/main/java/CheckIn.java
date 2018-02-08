@@ -9,7 +9,6 @@ public class CheckIn {
 
     private Integer checkInPassenger;
 
-
     public CheckIn(HashMap<String, Flight> flights, HashMap<String, Booking> bookings) {
         this.flights = flights;
         this.bookings = bookings;
@@ -37,6 +36,7 @@ public class CheckIn {
     }
 
     public void checkInPassenger() {
+        // TODO: set the booking to checkedIn
         checkInPassenger++;
     }
 
