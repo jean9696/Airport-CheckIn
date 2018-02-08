@@ -5,7 +5,8 @@ public class Flight {
     private Integer passengerCapacity;
     private BaggageSize baggageCapacity;
     private BaggageSize baggageRegistered;
-
+    private int nbPassengerRegistered; // stores the number of passengers who have checked-in for this flight
+    
     public Flight(String flightCode, String destinationAirport, String carrier, Integer passengerCapacity, BaggageSize baggageCapacity) {
         this.flightCode = flightCode;
         this.destinationAirport = destinationAirport;
@@ -62,5 +63,21 @@ public class Flight {
 
     public void setBaggageRegistered(BaggageSize baggageRegistered) {
         this.baggageRegistered = baggageRegistered;
+    }
+    
+    /**
+     * Method to increment the number of passengers who have checked-in for the flight.
+     * 
+     */
+    public void addOnePassenger() {
+    	nbPassengerRegistered++;
+    }
+    
+    /**
+     * Method to get the number of passengers who have checked-in for the flight. Useful for the report
+     * @return The number of passengers who have checked-in for the flight
+     */
+    public int getNbPassengersRegistered() {
+    	return nbPassengerRegistered;
     }
 }
