@@ -62,22 +62,16 @@ public class CheckIn {
                 JSONObject flight = (JSONObject) o;
 
                 String flightCode = (String) flight.get("Flight Code");
-                System.out.println(flightCode);
 
                 String destinationAirport = (String) flight.get("Destination Airport");
-                System.out.println(destinationAirport);
 
                 String carrier = (String) flight.get("Carrier");
-                System.out.println(carrier);
 
                 int maximumPassenger = parseInt(flight.get("Maximum Passengers").toString());
-                System.out.println(maximumPassenger);
 
                 int maximumBaggageWeight = parseInt(flight.get("Maximum Baggage Weight").toString());
-                System.out.println(maximumBaggageWeight);
 
                 int maximumBaggageVolume = parseInt(flight.get("Maximum Baggage Volume").toString());
-                System.out.println(maximumBaggageVolume);
 
                 BaggageSize baggage = new BaggageSize(maximumBaggageWeight, maximumBaggageVolume);
                 Flight flightObject = new Flight(flightCode, destinationAirport, carrier, maximumPassenger, baggage);
@@ -111,30 +105,21 @@ public class CheckIn {
                 JSONObject booking = (JSONObject) o;
 
                 String passengerName = (String) booking.get("Passenger Name");
-                System.out.println(passengerName);
 
                 String firstName = passengerName.split(" ", 2)[0];
                 String lastName = passengerName.split(" ", 2)[1];
-                System.out.println(firstName);
-                System.out.println(lastName);
 
                 int passengerAge = Integer.parseInt(booking.get("Passenger Age").toString());
-                System.out.println(passengerAge);
 
                 int bookingReferenceCode = parseInt(booking.get("Booking Reference Code").toString());
-                System.out.println(bookingReferenceCode);
 
                 int flightCode = parseInt(booking.get("Flight Code").toString());
-                System.out.println(flightCode);
 
                 Boolean checkedIn = Boolean.valueOf((String) booking.get("Checked In"));
-                System.out.println(checkedIn);
 
                 int baggageWeight = parseInt(booking.get("Baggage Weight").toString());
-                System.out.println(baggageWeight);
 
                 int baggageVolume = parseInt(booking.get("Baggage Volume").toString());
-                System.out.println(baggageVolume);
 
                 Flight flight = flightList.get(String.valueOf(flightCode));
 
