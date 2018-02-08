@@ -41,7 +41,7 @@ public class CheckInTest {
 
     @Test
     public void readBookingsFromInputFiles() {
-        /*HashMap<String, Flight> testFlights = CheckIn.readFlightsFromInputFiles();
+        HashMap<String, Flight> testFlights = CheckIn.readFlightsFromInputFiles();
         HashMap<String, Booking> testBookings = CheckIn.readBookingsFromInputFiles(testFlights);
         Flight testFlight = CheckIn.readFlightsFromInputFiles().get("789");
         BaggageSize testBaggage = new BaggageSize(2, 1);
@@ -49,8 +49,38 @@ public class CheckInTest {
         Booking testBooking = new Booking(123, true, testFlight, testBaggage, testPassenger);
         assertEquals("Error in readBookings: Booking ID",
                 testBooking.getBookId(),
-                testBookings.get("789").getBookId()
-        );*/
+                testBookings.get("123").getBookId()
+        );
+        assertEquals("Error in readBookings: Passenger Last Name",
+                testBooking.getPassenger().getLastname(),
+                testBookings.get("123").getPassenger().getLastname()
+        );
+        assertEquals("Error in readBookings: Passenger First Name",
+                testBooking.getPassenger().getSurname(),
+                testBookings.get("123").getPassenger().getSurname()
+        );
+        assertEquals("Error in readBookings: Passenger Age",
+                testBooking.getPassenger().getAge(),
+                testBookings.get("123").getPassenger().getAge()
+        );
+        assertEquals("Error in readBookings: Baggage Weight",
+                testBooking.getBaggageSize().getWeight(),
+                testBookings.get("123").getBaggageSize().getWeight()
+        );
+        assertEquals("Error in readBookings: Baggage Volume",
+                testBooking.getBaggageSize().getVolume(),
+                testBookings.get("123").getBaggageSize().getVolume()
+        );
+        assertEquals("Error in readBookings: Checked In",
+                testBooking.getCheckedIn(),
+                testBookings.get("123").getCheckedIn()
+        );
+        assertEquals("Error in readBookings: Flight Code",
+                testBooking.getFlight().getFlightCode(),
+                testBookings.get("123").getFlight().getFlightCode()
+        );
+
+
 
     }
 }
