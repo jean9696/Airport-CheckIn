@@ -134,6 +134,13 @@ public class GUI extends JFrame {
         messageArea.setText(message);
     }
 
+    public Boolean printOverCapacityConfirmDialog() {
+		return JOptionPane.showConfirmDialog(
+				null,
+				"You have too much baggage, you have to pay £XX."
+		) == 0;
+	}
+
     public void clear() {
 	    messageArea.setText("");
         lastNameInput.setText("");
@@ -151,7 +158,7 @@ public class GUI extends JFrame {
 	    try {
 	        return Integer.parseInt(text);
         } catch (java.lang.NumberFormatException e) {
-            return null; //we should ad an error message ?
+            return null;
         }
     }
 

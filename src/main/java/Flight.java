@@ -64,7 +64,12 @@ public class Flight {
     public void setBaggageRegistered(BaggageSize baggageRegistered) {
         this.baggageRegistered = baggageRegistered;
     }
-    
+
+
+    public void addBaggageRegistered(BaggageSize baggageRegistered) {
+        this.baggageRegistered.addBaggage(baggageRegistered);
+    }
+
     /**
      * Method to increment the number of passengers who have checked-in for the flight.
      * 
