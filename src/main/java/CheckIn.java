@@ -167,27 +167,32 @@ public class CheckIn {
             public void actionPerformed(ActionEvent e) {
                 Booking booking = checkIn.getBooking(GUI.getBookingReferenceInput());
                 if (booking != null && booking.canPassengerAccess(GUI.getSurnameInput(), GUI.getLastNameInput())) {
-                    BaggageSize passengerBaggage = new BaggageSize(GUI.getBaggageWeightInput(), GUI.getBaggageVolumeInput());
-                    if (passengerBaggage.isValidSize()) {
-                        checkIn.checkInPassenger(booking, passengerBaggage);
-                        // if passenger baggage are over capacity, the GUI shows a dialog and the user has to
-                        // to be able to check in
-                        if (passengerBaggage.isOverCapacity(booking.getBaggageSize())) {
-                            if (GUI.printOverCapacityConfirmDialog(passengerBaggage.calculateOverCapacityPrice(booking.getBaggageSize()))) {
+                    if (!booking.getCheckedIn()) {
+                        BaggageSize passengerBaggage = new BaggageSize(GUI.getBaggageWeightInput(), GUI.getBaggageVolumeInput());
+                        if (passengerBaggage.isValidSize()) {
+                            // if passenger baggage are over capacity, the GUI shows a dialog and the user has to
+                            // to be able to check in
+                            if (passengerBaggage.isOverCapacity(booking.getBaggageSize())) {
+                                if (GUI.printOverCapacityConfirmDialog(passengerBaggage.calculateOverCapacityPrice(booking.getBaggageSize()))) {
+                                    checkIn.checkInPassenger(booking, passengerBaggage);
+                                    GUI.clear();
+                                }
+                            } else {
+                                checkIn.checkInPassenger(booking, passengerBaggage);
                                 GUI.clear();
                             }
+                            // when every passenger have checked in the program print the report
+                            if (bookingNumber.equals(checkIn.getCheckInPassenger())) {
+                                GUI.close();
+                                checkIn.writeToFile("Report.txt", checkIn.makeReport());
+                                System.exit(0);
+                            }
                         } else {
-                            GUI.clear();
-                        }
-                        // when every passenger have checked in the program print the report
-                        if (bookingNumber.equals(checkIn.getCheckInPassenger())) {
-                            GUI.close();
-                            checkIn.writeToFile("Report.txt", checkIn.makeReport());
+                            GUI.setMessage("Invalid baggage size inputs");
                         }
                     } else {
-                        GUI.setMessage("Invalid baggage size inputs");
+                        GUI.setMessage("This passenger has already checkedIn");
                     }
-
                 } else {
                     GUI.setMessage("Invalid passenger inputs");
                 }

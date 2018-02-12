@@ -56,10 +56,10 @@ public class BaggageSize {
      */
     public Integer calculateOverCapacityPrice(BaggageSize refBaggage) {
         Integer additionnalPrice = 0;
-        if (!this.isOverVolume(refBaggage)) {
+        if (this.isOverVolume(refBaggage)) {
             additionnalPrice += 2 * (this.volume - refBaggage.getVolume());
         }
-        if (!this.isOverWeight(refBaggage)) {
+        if (this.isOverWeight(refBaggage)) {
             additionnalPrice += 5 * (this.weight - refBaggage.getWeight());
         }
         return additionnalPrice;
@@ -79,7 +79,7 @@ public class BaggageSize {
      * @return true if the size is a valid size
      */
     public Boolean isValidSize() {
-        return this.volume > 0 && this.weight > 0;
+        return this.volume != null && this.weight != null && this.volume > 0 && this.weight > 0;
     }
 
 }

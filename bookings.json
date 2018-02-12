@@ -4,7 +4,7 @@
       "Passenger Age": 13,
       "Booking Reference Code": "123",
       "Flight Code": "789",
-      "Checked In": "True",
+      "Checked In": "False",
       "Baggage Volume": "1",
       "Baggage Weight": "2"
     },
