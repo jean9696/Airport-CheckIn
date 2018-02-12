@@ -134,10 +134,10 @@ public class GUI extends JFrame {
         messageArea.setText(message);
     }
 
-    public Boolean printOverCapacityConfirmDialog() {
+    public Boolean printOverCapacityConfirmDialog(Integer price) {
 		return JOptionPane.showConfirmDialog(
 				null,
-				"You have too much baggage, you have to pay £XX."
+				"You have too much baggage, you have to pay £ " + price
 		) == 0;
 	}
 

@@ -81,7 +81,7 @@ public class CheckIn {
                         // if passenger baggage are over capacity, the GUI shows a dialog and the user has to
                         // to be able to check in
                         if (passengerBaggage.isOverCapacity(booking.getBaggageSize())) {
-                            if (GUI.printOverCapacityConfirmDialog()) {
+                            if (GUI.printOverCapacityConfirmDialog(passengerBaggage.calculateOverCapacityPrice(booking.getBaggageSize()))) {
                                 GUI.clear();
                             }
                         } else {

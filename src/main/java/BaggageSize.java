@@ -51,6 +51,21 @@ public class BaggageSize {
     }
 
     /**
+     * @param refBaggage
+     * @return the price that the passenger has to pay for additional baggage
+     */
+    public Integer calculateOverCapacityPrice(BaggageSize refBaggage) {
+        Integer additionnalPrice = 0;
+        if (!this.isOverVolume(refBaggage)) {
+            additionnalPrice += 2 * (this.volume - refBaggage.getVolume());
+        }
+        if (!this.isOverWeight(refBaggage)) {
+            additionnalPrice += 5 * (this.weight - refBaggage.getWeight());
+        }
+        return additionnalPrice;
+    }
+
+    /**
      * Add baggage volume and weight to the current baggage
      * @param newBaggage
      */
