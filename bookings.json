@@ -1,0 +1,20 @@
+[
+    {
+      "Passenger Name": "Bob Bobson",
+      "Passenger Age": 13,
+      "Booking Reference Code": "123",
+      "Flight Code": "789",
+      "Checked In": "True",
+      "Baggage Volume": "1",
+      "Baggage Weight": "2"
+    },
+    {
+      "Passenger Name": "Jim Johnson",
+      "Passenger Age": "99",
+      "Booking Reference Code": "456",
+      "Flight Code": "789",
+      "Checked In": "False",
+      "Baggage Volume": "2",
+      "Baggage Weight": "4"
+    }
+]
