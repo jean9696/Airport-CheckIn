@@ -233,15 +233,15 @@ public class CheckIn {
      */
 	public String makeReport() {
 		String report = "List of flight's statistics after check-in\nFlight code       Nb passengers   Total weight   Total volume  "
-				+ "Excess baggage fees\n";
-		report += "---------------------------------------------------------------------------------------------";
+				+ "\n";
+		report += "---------------------------------------------------------------------------------------------\n";
 		for (Flight flight : flights.values()) {
 			
 			report += String.format("%-8s", flight.getFlightCode());
 			report += String.format("%-3d", flight.getNbPassengersRegistered());
 			report += String.format("%-5d", flight.getBaggageRegistered().getWeight());
 			report += String.format("%-5d", flight.getBaggageRegistered().getVolume());
-			report += "\n";
+            report += "\n";
 			
 		}
 	return report;
