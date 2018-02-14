@@ -46,7 +46,7 @@ public class CheckInTest {
         Flight testFlight = CheckIn.readFlightsFromInputFiles().get("789");
         BaggageSize testBaggage = new BaggageSize(2, 1);
         Passenger testPassenger = new Passenger("Bob", "Bobson", 13);
-        Booking testBooking = new Booking(123, true, testFlight, testBaggage, testPassenger);
+        Booking testBooking = new Booking(123, false, testFlight, testBaggage, testPassenger);
         assertEquals("Error in readBookings: Booking ID",
                 testBooking.getBookId(),
                 testBookings.get("123").getBookId()
