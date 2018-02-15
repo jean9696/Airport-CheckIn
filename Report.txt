@@ -1,4 +1,5 @@
 List of flight's statistics after check-in
-Flight code       Nb passengers   Total weight   Total volume  Excess baggage fees
----------------------------------------------------------------------------------------------123     0  0    0    
+Flight code       Nb passengers   Total weight   Total volume  
+---------------------------------------------------------------------------------------------
+123     0  0    0    
 789     2  2    2    

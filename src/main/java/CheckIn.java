@@ -7,12 +7,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * Contains flights and bookings available in database
+ * Has the main function that displays the GUI to checkIn passengers
+ */
 public class CheckIn {
     private static HashMap<String, Flight> flights;
 
@@ -20,28 +23,49 @@ public class CheckIn {
 
     private Integer checkInPassenger;
 
+    /**
+     * @param flights
+     * @param bookings
+     */
     public CheckIn(HashMap<String, Flight> flights, HashMap<String, Booking> bookings) {
-        this.flights = flights;
-        this.bookings = bookings;
+        CheckIn.flights = flights;
+        CheckIn.bookings = bookings;
         this.checkInPassenger = 0;
     }
 
+    /**
+     * @return all flights
+     */
     public HashMap<String, Flight> getFlights() {
         return flights;
     }
 
+    /**
+     * @return all bookings
+     */
     public HashMap<String, Booking> getBookings() {
         return bookings;
     }
 
+    /**
+     * @param key
+     * @return a specific flight found by key
+     */
     public Flight getFlight(String key) {
         return flights.get(key);
     }
 
+    /**
+     * @param key
+     * @return a specific flight found by key
+     */
     public Booking getBooking(String key) {
         return bookings.get(key);
     }
 
+    /**
+     * @return how many passenger has checked in
+     */
     public Integer getCheckInPassenger() {
         return checkInPassenger;
     }
@@ -60,7 +84,10 @@ public class CheckIn {
         checkInPassenger++;
     }
 
-
+    /**
+     * @return flights got from input files
+     */
+    // TODO: move this function in a fileHelper class
     public static HashMap<String, Flight> readFlightsFromInputFiles() {
         JSONParser jsonParser = new JSONParser();
         HashMap<String, Flight> flightHashMap = new HashMap<String, Flight>();
@@ -101,6 +128,11 @@ public class CheckIn {
         return flightHashMap;
     }
 
+    /**
+     * @param flightList
+     * @return bookings got from input file
+     */
+    // TODO: move this function in a fileHelper class
     public static HashMap<String, Booking> readBookingsFromInputFiles(HashMap<String, Flight> flightList) {
 
         JSONParser jsonParser = new JSONParser();
@@ -153,10 +185,14 @@ public class CheckIn {
 
     }
 
+    /**
+     * @param args
+     * Starting point of the program, initialize variables and launch the GUI with the listener
+     */
     public static void main (String[] args) {
 
         // should come from files
-        HashMap<String, Flight> flights = readFlightsFromInputFiles();
+        final HashMap<String, Flight> flights = readFlightsFromInputFiles();
         HashMap<String, Booking> bookings = readBookingsFromInputFiles(flights);
 
         final Integer bookingNumber = bookings.size();
@@ -184,7 +220,7 @@ public class CheckIn {
                             // when every passenger have checked in the program print the report
                             if (bookingNumber.equals(checkIn.getCheckInPassenger())) {
                                 GUI.close();
-                                checkIn.writeToFile("Report.txt", checkIn.makeReport());
+                                FileHelper.writeToFile("Report.txt", FileHelper.makeReport(CheckIn.flights));
                                 System.exit(0);
                             }
                         } else {
@@ -201,51 +237,5 @@ public class CheckIn {
         GUI.setOnConfirm(handleConfirm);
         
     }
-    
-    /**
-	 * Write the informations in the file provided in parameters.
-	 * --- > This method comes from F21SF course lab and re-used in F21SF coursework <-----
-	 * @param filename the file in which to write
-	 * @param text the text to write in the file
-	 */
-    public void writeToFile(String filename, String text) {
-		 FileWriter fw;
-		 try {
-		    fw = new FileWriter(filename);
-		    fw.write(text);
-		 	fw.close();
-		 }
-		 //message and stop if file not found
-		 catch (FileNotFoundException fnf){
-			 System.out.println(filename + " not found ");
-			 System.exit(0);
-		 }
-		 //stack trace here because we don't expect to come here
-		 catch (IOException ioe){
-		    ioe.printStackTrace();
-		    System.exit(1);
-		 }
-	}
 
-    /**
-     * Method to make the report that summarizes all the flights informations
-     * @return The report
-     */
-	public String makeReport() {
-		String report = "List of flight's statistics after check-in\nFlight code       Nb passengers   Total weight   Total volume  "
-				+ "\n";
-		report += "---------------------------------------------------------------------------------------------\n";
-		for (Flight flight : flights.values()) {
-			
-			report += String.format("%-8s", flight.getFlightCode());
-			report += String.format("%-3d", flight.getNbPassengersRegistered());
-			report += String.format("%-5d", flight.getBaggageRegistered().getWeight());
-			report += String.format("%-5d", flight.getBaggageRegistered().getVolume());
-            report += "\n";
-			
-		}
-	return report;
-    }
-
-	
 }

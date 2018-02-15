@@ -1,3 +1,7 @@
+/**
+ * Represents a flight
+ * Is not static so also contains baggage and passenger registered so it is easier to print the report
+ */
 public class Flight {
     private String flightCode;
     private String destinationAirport;
@@ -6,7 +10,14 @@ public class Flight {
     private BaggageSize baggageCapacity;
     private BaggageSize baggageRegistered;
     private int nbPassengerRegistered; // stores the number of passengers who have checked-in for this flight
-    
+
+    /**
+     * @param flightCode
+     * @param destinationAirport
+     * @param carrier
+     * @param passengerCapacity
+     * @param baggageCapacity
+     */
     public Flight(String flightCode, String destinationAirport, String carrier, Integer passengerCapacity, BaggageSize baggageCapacity) {
         this.flightCode = flightCode;
         this.destinationAirport = destinationAirport;
@@ -17,55 +28,94 @@ public class Flight {
     }
 
 
+    /**
+     * @return flight code
+     */
     public String getFlightCode() {
         return flightCode;
     }
 
+    /**
+     * @param flightCode
+     */
     public void setFlightCode(String flightCode) {
         this.flightCode = flightCode;
     }
 
+    /**
+     * @return destination airport name
+     */
     public String getDestinationAirport() {
         return destinationAirport;
     }
 
+    /**
+     * @param destinationAirport
+     */
     public void setDestinationAirport(String destinationAirport) {
         this.destinationAirport = destinationAirport;
     }
 
+    /**
+     * @return carrier name
+     */
     public String getCarrier() {
         return carrier;
     }
 
+    /**
+     * @param carrier
+     */
     public void setCarrier(String carrier) {
         this.carrier = carrier;
     }
 
+    /**
+     * @return passenger capacity
+     */
     public Integer getPassengerCapacity() {
         return passengerCapacity;
     }
 
+    /**
+     * @param passengerCapacity
+     */
     public void setPassengerCapacity(Integer passengerCapacity) {
         this.passengerCapacity = passengerCapacity;
     }
 
+    /**
+     * @return baggage capacity
+     */
     public BaggageSize getBaggageCapacity() {
         return baggageCapacity;
     }
 
+    /**
+     * @param baggageCapacity
+     */
     public void setBaggageCapacity(BaggageSize baggageCapacity) {
         this.baggageCapacity = baggageCapacity;
     }
 
+    /**
+     * @return how much baggage is registered for this flight
+     */
     public BaggageSize getBaggageRegistered() {
         return baggageRegistered;
     }
 
+    /**
+     * @param baggageRegistered
+     */
     public void setBaggageRegistered(BaggageSize baggageRegistered) {
         this.baggageRegistered = baggageRegistered;
     }
 
-
+    /**
+     * Add baggage to current baggage size in the flight
+     * @param baggageRegistered
+     */
     public void addBaggageRegistered(BaggageSize baggageRegistered) {
         this.baggageRegistered.addBaggage(baggageRegistered);
     }

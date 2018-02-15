@@ -1,24 +1,44 @@
+/**
+ * Contains information about baggage size
+ * Can be either just information of the capacity or a passenger's baggage
+ */
 public class BaggageSize {
     private Integer weight;
     private Integer volume;
 
+    /**
+     * @param weight
+     * @param volume
+     */
     public BaggageSize(Integer weight, Integer volume) {
         this.weight = weight;
         this.volume = volume;
     }
 
+    /**
+     * @return current weight of the BaggageSize
+     */
     public Integer getWeight() {
         return weight;
     }
 
+    /**
+     * @param weight
+     */
     public void setWeight(Integer weight) {
         this.weight = weight;
     }
 
+    /**
+     * @return current volume of a Baggage size
+     */
     public Integer getVolume() {
         return volume;
     }
 
+    /**
+     * @param volume
+     */
     public void setVolume(Integer volume) {
         this.volume = volume;
     }

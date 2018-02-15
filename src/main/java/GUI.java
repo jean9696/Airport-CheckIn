@@ -3,6 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * GUI of the app
+ */
 public class GUI extends JFrame {
 
 	private JTextField lastNameInput, surnameInput, bookingReferenceInput, baggageVolumeInput, baggageWeightInput;
@@ -110,30 +113,52 @@ public class GUI extends JFrame {
 		this.add(southPanel, BorderLayout.SOUTH);
 	}
 
+	/**
+	 * @return lastname input as string
+	 */
     public String getLastNameInput() {
         return lastNameInput.getText();
     }
 
+	/**
+	 * @return surname input as string
+	 */
     public String getSurnameInput() {
         return surnameInput.getText();
     }
 
+	/**
+	 * @return booking ref as string
+	 */
     public String getBookingReferenceInput() {
         return bookingReferenceInput.getText();
     }
 
+	/**
+	 * @return volume input as int
+	 */
     public Integer getBaggageVolumeInput() {
         return convertJTextStringToInt(baggageVolumeInput.getText());
     }
 
+	/**
+	 * @return weight input as int
+	 */
     public Integer getBaggageWeightInput() {
         return convertJTextStringToInt(baggageWeightInput.getText());
     }
 
+	/**
+	 * @param message
+	 */
     public void setMessage(String message) {
         messageArea.setText(message);
     }
 
+	/**
+	 * @param price
+	 * @return response from the user
+	 */
     public Boolean printOverCapacityConfirmDialog(Integer price) {
 		return JOptionPane.showConfirmDialog(
 				null,
@@ -141,6 +166,9 @@ public class GUI extends JFrame {
 		) == 0;
 	}
 
+	/**
+	 * Clear the GUI of every inputs
+	 */
     public void clear() {
 	    messageArea.setText("");
         lastNameInput.setText("");
@@ -150,10 +178,18 @@ public class GUI extends JFrame {
         baggageWeightInput.setText("");
     }
 
+	/**
+	 * Set the listener of the button
+	 * @param onConfirm
+	 */
 	public void setOnConfirm(ActionListener onConfirm) {
         addButton.addActionListener(onConfirm);
     }
 
+	/**
+	 * @param text
+	 * @return Integer
+	 */
     protected Integer convertJTextStringToInt(String text) {
 	    try {
 	        return Integer.parseInt(text);
@@ -162,6 +198,9 @@ public class GUI extends JFrame {
         }
     }
 
+	/**
+	 * Close the GUI
+	 */
     public void close() {
         this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
     }
