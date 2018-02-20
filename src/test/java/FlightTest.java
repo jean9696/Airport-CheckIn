@@ -1,3 +1,7 @@
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertEquals;
+
 /**
 * GUI Tester. 
 * 
@@ -9,6 +13,14 @@ public class FlightTest {
 
     static public Flight createTestFlight() {
         return new Flight("0001", "Paris", "CDG", 150, BaggageSizeTest.createTestBaggageSize());
+    }
+
+    @Test
+    public void createFligth() {
+        Flight flight = createTestFlight();
+        assertEquals(flight.getBaggageRegistered().getVolume(), new Integer(0));
+        assertEquals(flight.getBaggageRegistered().getWeight(), new Integer(0));
+        assertEquals(flight.getNbPassengersRegistered(), 0);
     }
 
 
