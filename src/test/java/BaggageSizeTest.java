@@ -1,9 +1,10 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 
 /**
-* GUI Tester.
+* BaggageSizeTest
 *
 * @author Jean Dessane
 * @since feb. 7, 2018
@@ -15,9 +16,15 @@ public class BaggageSizeTest {
         return new BaggageSize(10, 10);
     }
 
+    BaggageSize refBaggage;
+
+    @Before
+    public void setUp() throws Exception {
+        refBaggage = new BaggageSize(10, 10);
+    }
+
     @Test
     public void isOverWeight() {
-        BaggageSize refBaggage = new BaggageSize(10, 10);
         assertEquals(createTestBaggageSize().isOverWeight(refBaggage), new Boolean(false));
         refBaggage.setWeight(5);
         assertEquals(createTestBaggageSize().isOverWeight(refBaggage), new Boolean(true));
@@ -27,7 +34,6 @@ public class BaggageSizeTest {
 
     @Test
     public void isOverVolume() {
-        BaggageSize refBaggage = new BaggageSize(10, 10);
         assertEquals(createTestBaggageSize().isOverVolume(refBaggage), new Boolean(false));
         refBaggage.setVolume(5);
         assertEquals(createTestBaggageSize().isOverVolume(refBaggage), new Boolean(true));
@@ -37,7 +43,6 @@ public class BaggageSizeTest {
 
     @Test
     public void isOverCapacity() {
-        BaggageSize refBaggage = new BaggageSize(10, 10);
         assertEquals(createTestBaggageSize().isOverCapacity(refBaggage), new Boolean(false));
         refBaggage = new BaggageSize(5, 10);
         assertEquals(createTestBaggageSize().isOverCapacity(refBaggage), new Boolean(true));
@@ -49,5 +54,4 @@ public class BaggageSizeTest {
         assertEquals(createTestBaggageSize().isOverCapacity(refBaggage), new Boolean(false));
     }
 
-
-} 
+}
