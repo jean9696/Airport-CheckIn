@@ -18,40 +18,43 @@ public class BaggageSizeTest {
 
     BaggageSize refBaggage;
 
+    BaggageSize testBaggage;
+
     @Before
     public void setUp() throws Exception {
         refBaggage = new BaggageSize(10, 10);
+        testBaggage = createTestBaggageSize();
     }
 
     @Test
     public void isOverWeight() {
-        assertEquals(createTestBaggageSize().isOverWeight(refBaggage), new Boolean(false));
+        assertEquals(testBaggage.isOverWeight(refBaggage), new Boolean(false));
         refBaggage.setWeight(5);
-        assertEquals(createTestBaggageSize().isOverWeight(refBaggage), new Boolean(true));
+        assertEquals(testBaggage.isOverWeight(refBaggage), new Boolean(true));
         refBaggage.setWeight(15);
-        assertEquals(createTestBaggageSize().isOverWeight(refBaggage), new Boolean(false));
+        assertEquals(testBaggage.isOverWeight(refBaggage), new Boolean(false));
     }
 
     @Test
     public void isOverVolume() {
-        assertEquals(createTestBaggageSize().isOverVolume(refBaggage), new Boolean(false));
+        assertEquals(testBaggage.isOverVolume(refBaggage), new Boolean(false));
         refBaggage.setVolume(5);
-        assertEquals(createTestBaggageSize().isOverVolume(refBaggage), new Boolean(true));
+        assertEquals(testBaggage.isOverVolume(refBaggage), new Boolean(true));
         refBaggage.setVolume(15);
-        assertEquals(createTestBaggageSize().isOverVolume(refBaggage), new Boolean(false));
+        assertEquals(testBaggage.isOverVolume(refBaggage), new Boolean(false));
     }
 
     @Test
     public void isOverCapacity() {
-        assertEquals(createTestBaggageSize().isOverCapacity(refBaggage), new Boolean(false));
+        assertEquals(testBaggage.isOverCapacity(refBaggage), new Boolean(false));
         refBaggage = new BaggageSize(5, 10);
-        assertEquals(createTestBaggageSize().isOverCapacity(refBaggage), new Boolean(true));
+        assertEquals(testBaggage.isOverCapacity(refBaggage), new Boolean(true));
         refBaggage = new BaggageSize(10, 5);
-        assertEquals(createTestBaggageSize().isOverCapacity(refBaggage), new Boolean(true));
+        assertEquals(testBaggage.isOverCapacity(refBaggage), new Boolean(true));
         refBaggage = new BaggageSize(15, 5);
-        assertEquals(createTestBaggageSize().isOverCapacity(refBaggage), new Boolean(true));
+        assertEquals(testBaggage.isOverCapacity(refBaggage), new Boolean(true));
         refBaggage = new BaggageSize(15, 15);
-        assertEquals(createTestBaggageSize().isOverCapacity(refBaggage), new Boolean(false));
+        assertEquals(testBaggage.isOverCapacity(refBaggage), new Boolean(false));
     }
 
 }
