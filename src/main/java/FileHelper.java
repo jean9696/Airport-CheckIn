@@ -63,7 +63,6 @@ public class FileHelper {
     /**
      * @return flights got from input files
      */
-    // TODO: move this function in a fileHelper class
     public static HashMap<String, Flight> readFlightsFromInputFiles() {
         JSONParser jsonParser = new JSONParser();
         HashMap<String, Flight> flightHashMap = new HashMap<String, Flight>();
@@ -108,7 +107,6 @@ public class FileHelper {
      * @param flightList
      * @return bookings got from input file
      */
-    // TODO: move this function in a fileHelper class
     public static HashMap<String, Booking> readBookingsFromInputFiles(HashMap<String, Flight> flightList) {
 
         JSONParser jsonParser = new JSONParser();
