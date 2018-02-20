@@ -150,6 +150,7 @@ public class GUI extends JFrame {
 
 	/**
 	 * @param message
+	 * set a message in the GUI text area
 	 */
     public void setMessage(String message) {
         messageArea.setText(message);
