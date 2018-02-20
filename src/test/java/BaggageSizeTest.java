@@ -54,4 +54,9 @@ public class BaggageSizeTest {
         assertEquals(createTestBaggageSize().isOverCapacity(refBaggage), new Boolean(false));
     }
 
+    @Test
+    public void addBaggage() {
+
+    }
+
 }
