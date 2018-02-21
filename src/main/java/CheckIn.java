@@ -1,16 +1,6 @@
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.HashMap;
-
-import static java.lang.Integer.parseInt;
 
 /**
  * Contains flights and bookings available in database
@@ -90,7 +80,7 @@ public class CheckIn {
      * @param args
      * Starting point of the program, initialize variables and launch the GUI with the listener
      */
-    public static void main (String[] args) {
+    public static void main (String[] args) throws Exception {
 
         // should come from files
         final HashMap<String, Flight> flights = FileHelper.readFlightsFromInputFiles();

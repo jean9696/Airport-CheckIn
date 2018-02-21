@@ -68,7 +68,7 @@ public class FileHelperTest {
     }
 
     @Test
-    public void readBookingsFromInputFiles() {
+    public void readBookingsFromInputFiles() throws Exception {
         HashMap<String, Flight> testFlights = FileHelper.readFlightsFromInputFiles();
         HashMap<String, Booking> testBookings = FileHelper.readBookingsFromInputFiles(testFlights);
         Flight testFlight = FileHelper.readFlightsFromInputFiles().get("789");

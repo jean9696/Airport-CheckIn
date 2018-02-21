@@ -18,7 +18,7 @@ public class CheckInTest {
     }
 
     @Test
-    public void checkInPassenger() {
+    public void checkInPassenger() throws Exception {
         Booking booking = BookingTest.createTestBooking();
         BaggageSize baggageSize = BaggageSizeTest.createTestBaggageSize();
         checkIn.checkInPassenger(booking, baggageSize);
@@ -26,7 +26,7 @@ public class CheckInTest {
     }
 
     @Test
-    public void addCheckInPassenger() {
+    public void addCheckInPassenger() throws Exception {
         Booking booking = BookingTest.createTestBooking();
         BaggageSize baggageSize = BaggageSizeTest.createTestBaggageSize();
         Integer currentCheckedInPassengerNumber = checkIn.getCheckInPassenger();
@@ -35,7 +35,7 @@ public class CheckInTest {
     }
 
     @Test
-    public void addPassengerToFlight() {
+    public void addPassengerToFlight() throws Exception {
         Booking booking = BookingTest.createTestBooking();
         BaggageSize baggageSize = BaggageSizeTest.createTestBaggageSize();
         Integer currentRegisterdPassengerNumber = booking.getFlight().getNbPassengersRegistered();

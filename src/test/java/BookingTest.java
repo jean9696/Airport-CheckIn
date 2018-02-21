@@ -11,7 +11,7 @@ import static junit.framework.Assert.assertEquals;
 */
 public class BookingTest {
 
-    static Booking createTestBooking() {
+    static Booking createTestBooking() throws Exception {
         return new Booking(10, false, FlightTest.createTestFlight(), BaggageSizeTest.createTestBaggageSize(), PassengerTest.createTestPassenger());
     }
 
@@ -24,11 +24,11 @@ public class BookingTest {
     }
 
     @Test
-    public void canPassengerAccess() {
+    public void canPassengerAccess() throws Exception {
         Booking booking = createTestBooking();
         // we know that in a test booking the passenger is Jon Doe
         assertEquals(booking.canPassengerAccess("Jon", "Doe"), new Boolean(true));
-        assertEquals(booking.canPassengerAccess("Jerem", "Star"), new Boolean(true));
+        assertEquals(booking.canPassengerAccess("Jerem", "Star"), new Boolean(false));
     }
 
 }

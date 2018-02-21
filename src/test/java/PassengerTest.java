@@ -1,3 +1,7 @@
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertTrue;
+
 /**
 * GUI Tester. 
 * 
@@ -7,8 +11,21 @@
 */ 
 public class PassengerTest {
 
-    static public Passenger createTestPassenger() {
+    static public Passenger createTestPassenger() throws Exception {
         return new Passenger("Jon", "Doe", 48);
+    }
+
+    @Test
+    public void setPassenger() {
+        boolean thrown = false;
+
+        try {
+            new Passenger("", "", -10);
+        } catch (Exception e) {
+            thrown = true;
+        }
+
+        assertTrue(thrown);
     }
 
 } 

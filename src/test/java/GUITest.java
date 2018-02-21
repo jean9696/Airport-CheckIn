@@ -20,4 +20,15 @@ public class GUITest {
         assertEquals(GUI.convertJTextStringToInt("test"),  null);
     }
 
+    @Test
+    public void clear() {
+        GUI GUI = new GUI();
+        GUI.clear();
+        assertEquals(GUI.getBaggageVolumeInput(),  null);
+        assertEquals(GUI.getBaggageWeightInput(),  null);
+        assertEquals(GUI.getLastNameInput(),  "");
+        assertEquals(GUI.getSurnameInput(),  "");
+        assertEquals(GUI.getBookingReferenceInput(),  "");
+    }
+
 } 
