@@ -59,7 +59,32 @@ public class BaggageSizeTest {
 
     @Test
     public void addBaggage() {
+        testBaggage.addBaggage(refBaggage);
+        assertEquals(testBaggage.getVolume(), new Integer(20));
+        assertEquals(testBaggage.getWeight(), new Integer(20));
 
+        refBaggage.setVolume(new Integer(21));
+        refBaggage.setWeight(new Integer(14));
+        testBaggage.addBaggage(refBaggage);
+        assertEquals(testBaggage.getVolume(), new Integer(41));
+        assertEquals(testBaggage.getWeight(), new Integer(34));
+    }
+
+    @Test
+    public void isValidSize() {
+        assertEquals(testBaggage.isValidSize(), new Boolean(true));
+        testBaggage.setVolume(new Integer (-1));
+        assertEquals(testBaggage.isValidSize(), new Boolean(false));
+        testBaggage.setWeight(new Integer (-1));
+        assertEquals(testBaggage.isValidSize(), new Boolean(false));
+    }
+
+    @Test
+    public void calculateOverCapacityPrice() {
+        testBaggage.setVolume(new Integer(20));
+        assertEquals(testBaggage.calculateOverCapacityPrice(refBaggage), new Integer(20));
+        testBaggage.setWeight(new Integer(20));
+        assertEquals(testBaggage.calculateOverCapacityPrice(refBaggage), new Integer(70));
     }
 
 }

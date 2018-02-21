@@ -71,6 +71,7 @@ public class BaggageSize {
     }
 
     /**
+     * Calculate the potential extra fees
      * @param refBaggage
      * @return the price that the passenger has to pay for additional baggage
      */
