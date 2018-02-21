@@ -11,7 +11,10 @@ public class Passenger {
      * @param lastname
      * @param age
      */
-    public Passenger(String surname, String lastname, Integer age) {
+    public Passenger(String surname, String lastname, Integer age) throws Exception {
+        if (surname.length() < 2 || lastname.length() < 2 || age < 1) {
+            throw new Exception("Invalid passenger constructor inputs");
+        }
         this.surname = surname;
         this.lastname = lastname;
         this.age = age;

@@ -107,7 +107,7 @@ public class FileHelper {
      * @param flightList
      * @return bookings got from input file
      */
-    public static HashMap<String, Booking> readBookingsFromInputFiles(HashMap<String, Flight> flightList) {
+    public static HashMap<String, Booking> readBookingsFromInputFiles(HashMap<String, Flight> flightList) throws Exception {
 
         JSONParser jsonParser = new JSONParser();
         HashMap<String, Booking> bookingHashMap = new HashMap<String, Booking>();
