@@ -74,7 +74,11 @@ public class CheckIn {
         checkInPassenger++;
     }
 
-
+    public void checkInPassenger (Booking booking, BaggageSize passengerBaggage, Integer extraFees) {
+        Flight passengerFlight = booking.getFlight();
+        passengerFlight.addExtraFees(extraFees);
+        checkInPassenger(booking, passengerBaggage);
+    }
 
     /**
      * @param args
@@ -100,8 +104,9 @@ public class CheckIn {
                             // if passenger baggage are over capacity, the GUI shows a dialog and the user has to
                             // to be able to check in
                             if (passengerBaggage.isOverCapacity(booking.getBaggageSize())) {
-                                if (GUI.printOverCapacityConfirmDialog(passengerBaggage.calculateOverCapacityPrice(booking.getBaggageSize()))) {
-                                    checkIn.checkInPassenger(booking, passengerBaggage);
+                                Integer extraFees = passengerBaggage.calculateOverCapacityPrice(booking.getBaggageSize());
+                                if (GUI.printOverCapacityConfirmDialog(extraFees)) {
+                                    checkIn.checkInPassenger(booking, passengerBaggage, extraFees);
                                     GUI.clear();
                                 }
                             } else {

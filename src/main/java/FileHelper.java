@@ -45,15 +45,19 @@ public class FileHelper {
      * @return The report
      */
     public static String makeReport(HashMap<String, Flight> flights) {
-        String report = "List of flight's statistics after check-in\nFlight code       Nb passengers   Total weight   Total volume  "
+        String report = "List of flight's statistics after check-in\nFlight code       Nb passengers   Total weight (exceeded?)" +
+                "   Total volume (exceeded?)  Extra fees collected (£)"
                 + "\n";
         report += "---------------------------------------------------------------------------------------------\n";
         for (Flight flight : flights.values()) {
 
-            report += String.format("%-8s", flight.getFlightCode());
-            report += String.format("%-3d", flight.getNbPassengersRegistered());
-            report += String.format("%-5d", flight.getBaggageRegistered().getWeight());
-            report += String.format("%-5d", flight.getBaggageRegistered().getVolume());
+            report += String.format("%-18s", flight.getFlightCode());
+            report += String.format("%-16d", flight.getNbPassengersRegistered());
+            report += String.format("%-4d", flight.getBaggageRegistered().getWeight());
+            report += String.format("%-23s", "(" + flight.isFlightOverweighted() + ")");
+            report += String.format("%-4d", flight.getBaggageRegistered().getVolume());
+            report += String.format("%-22s", "(" + flight.isFlightOverweighted() + ")");
+            report += String.format("%-6d", flight.getExtraFees());
             report += "\n";
 
         }

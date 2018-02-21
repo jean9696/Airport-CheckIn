@@ -10,6 +10,7 @@ public class Flight {
     private BaggageSize baggageCapacity;
     private BaggageSize baggageRegistered;
     private int nbPassengerRegistered; // stores the number of passengers who have checked-in for this flight
+    private int extraFeesCollected;
 
     /**
      * @param flightCode
@@ -127,6 +128,21 @@ public class Flight {
     public void addOnePassenger() {
     	nbPassengerRegistered++;
     }
+
+    /**
+     * Method that counts the extra fees collected for the flight
+     */
+    public void addExtraFees(int fees) {
+        extraFeesCollected += fees;
+    }
+
+    /**
+     * Get the extra fees collected
+     * @return Extra fees collected in £
+     */
+    public int getExtraFees() {
+        return extraFeesCollected;
+    }
     
     /**
      * Method to get the number of passengers who have checked-in for the flight. Useful for the report
@@ -135,4 +151,27 @@ public class Flight {
     public int getNbPassengersRegistered() {
     	return nbPassengerRegistered;
     }
+
+    /**
+     * Check if the flight is overloaded (weight of baggage registered greater than the flight weight capacity)
+     * @return true if the flight is overloaded
+     */
+    public String isFlightOverweighted() {
+        if (this.getBaggageRegistered().getWeight() > this.baggageCapacity.getWeight()) {
+            return "Y";
+        }
+        else {return "N";}
+    }
+
+    /**
+     * Check whether the volume of the registered baggage is greater than the flight volume capacity
+     * @return true if the flight volume capacity is exceeded
+     */
+    public String isBaggageRegisteredTooLarge() {
+        if (this.getBaggageRegistered().getVolume() > this.baggageCapacity.getVolume()) {
+            return "Y";
+        }
+        else {return "N";}
+    }
+
 }

@@ -40,10 +40,11 @@ public class CheckInTest {
         BaggageSize baggageSize = BaggageSizeTest.createTestBaggageSize();
         Integer currentRegisterdPassengerNumber = booking.getFlight().getNbPassengersRegistered();
         BaggageSize currentRegisterdBaggageSize = booking.getFlight().getBaggageRegistered();
-        checkIn.checkInPassenger(booking, baggageSize);
+        checkIn.checkInPassenger(booking, baggageSize, 10);
         currentRegisterdBaggageSize.addBaggage(baggageSize);
         assertEquals(booking.getFlight().getNbPassengersRegistered(), currentRegisterdPassengerNumber + 1);
         assertEquals(booking.getFlight().getBaggageRegistered(), currentRegisterdBaggageSize);
+        assertEquals(booking.getFlight().getExtraFees(), 10);
     }
 
 
