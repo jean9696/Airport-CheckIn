@@ -1,10 +1,12 @@
 package model;
 
+import java.util.Observable;
+
 /**
  * Represents a flight
  * Is not static so also contains baggage and passenger registered so it is easier to print the report
  */
-public class Flight {
+public class Flight extends Observable {
     private String flightCode;
     private String destinationAirport;
     private String carrier;
