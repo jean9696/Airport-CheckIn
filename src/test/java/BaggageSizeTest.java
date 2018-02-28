@@ -1,3 +1,4 @@
+import model.BaggageSize;
 import org.junit.Before;
 import org.junit.Test;
 

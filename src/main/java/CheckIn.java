@@ -1,10 +1,16 @@
+import model.BaggageSize;
+import model.Booking;
+import model.FileHelper;
+import model.Flight;
+import view.GUI;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
 /**
  * Contains flights and bookings available in database
- * Has the main function that displays the GUI to checkIn passengers
+ * Has the main function that displays the view.GUI to checkIn passengers
  */
 public class CheckIn {
     private static HashMap<String, Flight> flights;
@@ -82,7 +88,7 @@ public class CheckIn {
 
     /**
      * @param args
-     * Starting point of the program, initialize variables and launch the GUI with the listener
+     * Starting point of the program, initialize variables and launch the view.GUI with the listener
      */
     public static void main (String[] args) throws Exception {
 
@@ -101,7 +107,7 @@ public class CheckIn {
                     if (!booking.getCheckedIn()) {
                         BaggageSize passengerBaggage = new BaggageSize(GUI.getBaggageWeightInput(), GUI.getBaggageVolumeInput());
                         if (passengerBaggage.isValidSize()) {
-                            // if passenger baggage are over capacity, the GUI shows a dialog and the user has to
+                            // if passenger baggage are over capacity, the view.GUI shows a dialog and the user has to
                             // to be able to check in
                             if (passengerBaggage.isOverCapacity(booking.getBaggageSize())) {
                                 Integer extraFees = passengerBaggage.calculateOverCapacityPrice(booking.getBaggageSize());

@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">CheckIn</span>
 extends java.lang.Object</pre>
 <div class="block">Contains flights and bookings available in database
- Has the main function that displays the GUI to checkIn passengers</div>
+ Has the main function that displays the view.GUI to checkIn passengers</div>
 </li>
 </ul>
 </div>
@@ -128,8 +128,8 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="CheckIn.html#CheckIn-java.util.HashMap-java.util.HashMap-">CheckIn</a></span>(java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a>&gt;&nbsp;flights,
-       java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a>&gt;&nbsp;bookings)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="CheckIn.html#CheckIn-java.util.HashMap-java.util.HashMap-">CheckIn</a></span>(java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a>&gt;&nbsp;flights,
+       java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a>&gt;&nbsp;bookings)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -148,18 +148,18 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#checkInPassenger-Booking-BaggageSize-">checkInPassenger</a></span>(<a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a>&nbsp;booking,
-                <a href="BaggageSize.html" title="class in &lt;Unnamed&gt;">BaggageSize</a>&nbsp;passengerBaggage)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#checkInPassenger-Booking-BaggageSize-">checkInPassenger</a></span>(<a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a>&nbsp;booking,
+                <a href="BaggageSize.html" title="class in &lt;Unnamed&gt;">model.BaggageSize</a>&nbsp;passengerBaggage)</code>
 <div class="block">Check in the passenger by incrementing the total of passengers who have checkedIn
  and set add this passenger baggage to the corresponding flight</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a></code></td>
+<td class="colFirst"><code><a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#getBooking-java.lang.String-">getBooking</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#getBookings--">getBookings</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -167,11 +167,11 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#getCheckInPassenger--">getCheckInPassenger</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a></code></td>
+<td class="colFirst"><code><a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#getFlight-java.lang.String-">getFlight</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#getFlights--">getFlights</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
@@ -179,11 +179,11 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#main-java.lang.String:A-">main</a></span>(java.lang.String[]&nbsp;args)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>static java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#readBookingsFromInputFiles-java.util.HashMap-">readBookingsFromInputFiles</a></span>(java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a>&gt;&nbsp;flightList)</code>&nbsp;</td>
+<td class="colFirst"><code>static java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#readBookingsFromInputFiles-java.util.HashMap-">readBookingsFromInputFiles</a></span>(java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a>&gt;&nbsp;flightList)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>static java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a>&gt;</code></td>
+<td class="colFirst"><code>static java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="CheckIn.html#readFlightsFromInputFiles--">readFlightsFromInputFiles</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
@@ -214,8 +214,8 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>CheckIn</h4>
-<pre>public&nbsp;CheckIn(java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a>&gt;&nbsp;flights,
-               java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a>&gt;&nbsp;bookings)</pre>
+<pre>public&nbsp;CheckIn(java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a>&gt;&nbsp;flights,
+               java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a>&gt;&nbsp;bookings)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>flights</code> - </dd>
@@ -237,7 +237,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getFlights</h4>
-<pre>public&nbsp;java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a>&gt;&nbsp;getFlights()</pre>
+<pre>public&nbsp;java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a>&gt;&nbsp;getFlights()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>all flights</dd>
@@ -250,7 +250,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getBookings</h4>
-<pre>public&nbsp;java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a>&gt;&nbsp;getBookings()</pre>
+<pre>public&nbsp;java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a>&gt;&nbsp;getBookings()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>all bookings</dd>
@@ -263,7 +263,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getFlight</h4>
-<pre>public&nbsp;<a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a>&nbsp;getFlight(java.lang.String&nbsp;key)</pre>
+<pre>public&nbsp;<a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a>&nbsp;getFlight(java.lang.String&nbsp;key)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - </dd>
@@ -278,7 +278,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getBooking</h4>
-<pre>public&nbsp;<a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a>&nbsp;getBooking(java.lang.String&nbsp;key)</pre>
+<pre>public&nbsp;<a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a>&nbsp;getBooking(java.lang.String&nbsp;key)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - </dd>
@@ -306,8 +306,8 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>checkInPassenger</h4>
-<pre>public&nbsp;void&nbsp;checkInPassenger(<a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a>&nbsp;booking,
-                             <a href="BaggageSize.html" title="class in &lt;Unnamed&gt;">BaggageSize</a>&nbsp;passengerBaggage)</pre>
+<pre>public&nbsp;void&nbsp;checkInPassenger(<a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a>&nbsp;booking,
+                             <a href="BaggageSize.html" title="class in &lt;Unnamed&gt;">model.BaggageSize</a>&nbsp;passengerBaggage)</pre>
 <div class="block">Check in the passenger by incrementing the total of passengers who have checkedIn
  and set add this passenger baggage to the corresponding flight</div>
 <dl>
@@ -323,7 +323,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>readFlightsFromInputFiles</h4>
-<pre>public static&nbsp;java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a>&gt;&nbsp;readFlightsFromInputFiles()</pre>
+<pre>public static&nbsp;java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a>&gt;&nbsp;readFlightsFromInputFiles()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>flights got from input files</dd>
@@ -336,7 +336,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>readBookingsFromInputFiles</h4>
-<pre>public static&nbsp;java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">Booking</a>&gt;&nbsp;readBookingsFromInputFiles(java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">Flight</a>&gt;&nbsp;flightList)</pre>
+<pre>public static&nbsp;java.util.HashMap&lt;java.lang.String,<a href="Booking.html" title="class in &lt;Unnamed&gt;">model.Booking</a>&gt;&nbsp;readBookingsFromInputFiles(java.util.HashMap&lt;java.lang.String,<a href="Flight.html" title="class in &lt;Unnamed&gt;">model.Flight</a>&gt;&nbsp;flightList)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>flightList</code> - </dd>
@@ -354,7 +354,7 @@ extends java.lang.Object</pre>
 <pre>public static&nbsp;void&nbsp;main(java.lang.String[]&nbsp;args)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>args</code> - Starting point of the program, initialize variables and launch the GUI with the listener</dd>
+<dd><code>args</code> - Starting point of the program, initialize variables and launch the view.GUI with the listener</dd>
 </dl>
 </li>
 </ul>

@@ -1,3 +1,5 @@
+package model;
+
 /**
  * Contains information about baggage size
  * Can be either just information of the capacity or a passenger's baggage
@@ -16,7 +18,7 @@ public class BaggageSize {
     }
 
     /**
-     * @return current weight of the BaggageSize
+     * @return current weight of the model.BaggageSize
      */
     public Integer getWeight() {
         return weight;

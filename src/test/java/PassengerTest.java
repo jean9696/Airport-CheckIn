@@ -1,9 +1,10 @@
+import model.Passenger;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
 
 /**
-* GUI Tester. 
+* view.GUI Tester.
 * 
 * @author Jean Dessane
 * @since feb. 7, 2018

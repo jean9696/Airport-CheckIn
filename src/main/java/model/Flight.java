@@ -1,3 +1,5 @@
+package model;
+
 /**
  * Represents a flight
  * Is not static so also contains baggage and passenger registered so it is easier to print the report

@@ -1,10 +1,12 @@
+package view;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * GUI of the app
+ * view.GUI of the app
  */
 public class GUI extends JFrame {
 
@@ -15,9 +17,9 @@ public class GUI extends JFrame {
 	public GUI () {
 
 		// set up the title of the window
-		this.setTitle("Booking GUI");
+		this.setTitle("model.Booking view.GUI");
 
-		// call the two functions that set up the GUI
+		// call the two functions that set up the view.GUI
 		setupNorthPanel();
 		setupCenterPanel();
 		setupSouthPanel();
@@ -53,7 +55,7 @@ public class GUI extends JFrame {
 		//Set up the 3rd line for the booking reference
 		JPanel bookingRefPanel = new JPanel();
 		bookingRefPanel.setLayout(new GridLayout(1,2));
-		bookingRefPanel.add(new JLabel("Booking ref. code"));
+		bookingRefPanel.add(new JLabel("model.Booking ref. code"));
 		bookingReferenceInput = new JTextField(15);
 		bookingRefPanel.add(bookingReferenceInput);
 
@@ -150,7 +152,7 @@ public class GUI extends JFrame {
 
 	/**
 	 * @param message
-	 * set a message in the GUI text area
+	 * set a message in the view.GUI text area
 	 */
     public void setMessage(String message) {
         messageArea.setText(message);
@@ -168,7 +170,7 @@ public class GUI extends JFrame {
 	}
 
 	/**
-	 * Clear the GUI of every inputs
+	 * Clear the view.GUI of every inputs
 	 */
     public void clear() {
 	    messageArea.setText("");
@@ -200,7 +202,7 @@ public class GUI extends JFrame {
     }
 
 	/**
-	 * Close the GUI
+	 * Close the view.GUI
 	 */
     public void close() {
         this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));

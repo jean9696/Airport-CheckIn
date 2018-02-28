@@ -1,3 +1,5 @@
+package model;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -45,7 +47,7 @@ public class FileHelper {
      * @return The report
      */
     public static String makeReport(HashMap<String, Flight> flights) {
-        String report = "List of flight's statistics after check-in\nFlight code       Nb passengers   Total weight (exceeded?)" +
+        String report = "List of flight's statistics after check-in\nmodel.Flight code       Nb passengers   Total weight (exceeded?)" +
                 "   Total volume (exceeded?)  Extra fees collected (£)"
                 + "\n";
         report += "---------------------------------------------------------------------------------------------\n";
@@ -77,7 +79,7 @@ public class FileHelper {
             {
                 JSONObject flight = (JSONObject) o;
 
-                String flightCode = (String) flight.get("Flight Code");
+                String flightCode = (String) flight.get("model.Flight Code");
 
                 String destinationAirport = (String) flight.get("Destination Airport");
 
@@ -124,16 +126,16 @@ public class FileHelper {
             {
                 JSONObject booking = (JSONObject) o;
 
-                String passengerName = (String) booking.get("Passenger Name");
+                String passengerName = (String) booking.get("model.Passenger Name");
 
                 String firstName = passengerName.split(" ", 2)[0];
                 String lastName = passengerName.split(" ", 2)[1];
 
-                int passengerAge = Integer.parseInt(booking.get("Passenger Age").toString());
+                int passengerAge = Integer.parseInt(booking.get("model.Passenger Age").toString());
 
-                int bookingReferenceCode = parseInt(booking.get("Booking Reference Code").toString());
+                int bookingReferenceCode = parseInt(booking.get("model.Booking Reference Code").toString());
 
-                int flightCode = parseInt(booking.get("Flight Code").toString());
+                int flightCode = parseInt(booking.get("model.Flight Code").toString());
 
                 Boolean checkedIn = Boolean.valueOf((String) booking.get("Checked In"));
 

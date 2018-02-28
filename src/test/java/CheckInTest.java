@@ -1,3 +1,6 @@
+import model.BaggageSize;
+import model.Booking;
+import model.Flight;
 import org.junit.Before;
 import org.junit.Test;
 

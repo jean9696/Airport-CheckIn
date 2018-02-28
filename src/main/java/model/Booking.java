@@ -1,5 +1,7 @@
+package model;
+
 /**
- * Booking of a flight with passenger and passenger's baggage size information
+ * model.Booking of a flight with passenger and passenger's baggage size information
  * Can only have one passenger
  * Defined by its Id (bookId)
  */

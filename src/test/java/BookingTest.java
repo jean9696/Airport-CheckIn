@@ -1,9 +1,11 @@
+import model.Booking;
 import org.junit.Test;
+import view.GUI;
 
 import static junit.framework.Assert.assertEquals;
 
 /**
-* GUI Tester.
+* view.GUI Tester.
 *
 * @author Jean Dessane
 * @since feb. 7, 2018

@@ -1,9 +1,10 @@
+import model.Flight;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 
 /**
-* GUI Tester. 
+* view.GUI Tester.
 * 
 * @author Jean Dessane
 * @since feb. 7, 2018
