@@ -80,6 +80,12 @@ public class CheckIn {
         checkInPassenger++;
     }
 
+    /**
+     * Polymorphism of checkInPassenger above to increment extra fees counter
+     * @param booking
+     * @param passengerBaggage
+     * @param extraFees
+     */
     public void checkInPassenger (Booking booking, BaggageSize passengerBaggage, Integer extraFees) {
         Flight passengerFlight = booking.getFlight();
         passengerFlight.addExtraFees(extraFees);
