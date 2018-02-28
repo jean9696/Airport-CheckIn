@@ -1,4 +1,4 @@
-import model.Booking;
+import model.entity.Booking;
 import org.junit.Test;
 import view.GUI;
 
@@ -14,7 +14,7 @@ import static junit.framework.Assert.assertEquals;
 public class BookingTest {
 
     static Booking createTestBooking() throws Exception {
-        return new Booking(10, false, FlightTest.createTestFlight(), BaggageSizeTest.createTestBaggageSize(), PassengerTest.createTestPassenger());
+        return new Booking(10, false, FlightTest.createTestFlight(), BaggageSizeTest.createTestBaggageSize(), PassengerInformationTest.createTestPassenger());
     }
 
     @Test

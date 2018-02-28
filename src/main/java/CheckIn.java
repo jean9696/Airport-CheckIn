@@ -1,5 +1,8 @@
+import controller.CheckInDeskController;
 import controller.QueueController;
-import model.*;
+import model.collection.PassengerList;
+import model.collection.PassengerQueue;
+import model.entity.*;
 import view.GUI;
 
 import java.awt.event.ActionEvent;
@@ -96,17 +99,31 @@ public class CheckIn {
      */
     public static void main (String[] args) throws Exception {
 
-        final HashMap<String, Flight> flights = FileHelper.readFlightsFromInputFiles();
+        HashMap<String, Flight> flights = FileHelper.readFlightsFromInputFiles();
         HashMap<String, Booking> bookings = FileHelper.readBookingsFromInputFiles(flights);
 
+        //TODO: move that in bookingList
+        PassengerList passengers = new PassengerList();
+        for (Booking booking : bookings.values()) {
+            passengers.add(new Passenger(booking.getPassenger(), booking.getBookId()));
+        }
+
         // Queue
-        PassengerQueue passengerQueue = PassengerQueue.createFakeRandomQueue(10);
+        PassengerQueue passengerQueue = new PassengerQueue(passengers.getRandomPassengersToQueue(10));
         QueueController queueController = new QueueController(passengerQueue);
-        queueController.simulatePassengerArrival(10); // async
+        queueController.simulatePassengerArrival(passengers); // async
 
         //Desk(s)
+       for (int i=0;i<2;i++) {
+            CheckInDesk checkInDesk = new CheckInDesk(i);
+            CheckInDeskController checkInDeskController = new CheckInDeskController(checkInDesk);
+            checkInDeskController.simulateCheckIn(passengerQueue, 60); //async
+        }
 
         //Flight(s)
+        for (Flight flight : flights.values()) {
+            // TODO: just print the view
+        }
 
         //run GUI with obervables
 
@@ -163,7 +180,7 @@ public class CheckIn {
             }
         };
         GUI.setOnConfirm(handleConfirm);
-        
+
     }
 
 }

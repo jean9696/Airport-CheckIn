@@ -1,4 +1,4 @@
-import model.BaggageSize;
+import model.entity.BaggageSize;
 import org.junit.Before;
 import org.junit.Test;
 

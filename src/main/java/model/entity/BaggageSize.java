@@ -1,4 +1,4 @@
-package model;
+package model.entity;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -26,7 +26,7 @@ public class BaggageSize {
     }
 
     /**
-     * @return current weight of the model.BaggageSize
+     * @return current weight of the model.entity.BaggageSize
      */
     public Integer getWeight() {
         return weight;

@@ -1,4 +1,4 @@
-import model.Passenger;
+import model.entity.PassengerInformation;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
@@ -10,10 +10,10 @@ import static junit.framework.TestCase.assertTrue;
 * @since feb. 7, 2018
 * @version 1.0 
 */ 
-public class PassengerTest {
+public class PassengerInformationTest {
 
-    static public Passenger createTestPassenger() throws Exception {
-        return new Passenger("Jon", "Doe", 48, BaggageSizeTest.createTestBaggageSize());
+    static public PassengerInformation createTestPassenger() throws Exception {
+        return new PassengerInformation("Jon", "Doe", 48);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class PassengerTest {
         boolean thrown = false;
 
         try {
-            new Passenger("", "", -10, BaggageSizeTest.createTestBaggageSize());
+            new PassengerInformation("", "", -10);
         } catch (Exception e) {
             thrown = true;
         }

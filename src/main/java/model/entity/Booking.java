@@ -1,7 +1,7 @@
-package model;
+package model.entity;
 
 /**
- * model.Booking of a flight with passenger and passenger's baggage size information
+ * model.entity.Booking of a flight with passenger and passenger's baggage size information
  * Can only have one passenger
  * Defined by its Id (bookId)
  */
@@ -10,7 +10,7 @@ public class Booking {
     private Boolean checkedIn;
     private Flight flight;
     private BaggageSize baggageSize;
-    private Passenger passenger;
+    private PassengerInformation passenger;
 
     /**
      * @param bookId
@@ -19,7 +19,7 @@ public class Booking {
      * @param baggageSize
      * @param passenger
      */
-    public Booking(Integer bookId, Boolean checkedIn, Flight flight, BaggageSize baggageSize, Passenger passenger) {
+    public Booking(Integer bookId, Boolean checkedIn, Flight flight, BaggageSize baggageSize, PassengerInformation passenger) {
         this.bookId = bookId;
         this.checkedIn = checkedIn;
         this.flight = flight;
@@ -87,14 +87,14 @@ public class Booking {
     /**
      * @return passenger associated to this booking
      */
-    public Passenger getPassenger() {
+    public PassengerInformation getPassenger() {
         return passenger;
     }
 
     /**
      * @param passenger
      */
-    public void setPassenger(Passenger passenger) {
+    public void setPassenger(PassengerInformation passenger) {
         this.passenger = passenger;
     }
 

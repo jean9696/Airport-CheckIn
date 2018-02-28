@@ -1,15 +1,16 @@
-package model;
+package model.entity;
 
 import java.util.Observable;
 
 public class CheckInDesk extends Observable {
     private Integer id;
     private Passenger currentPassenger;
-    private BaggageSize currentBaggage;
+    private Boolean open;
 
 
     public CheckInDesk(Integer id) {
         this.id = id;
+        this.open = true;
     }
 
     public Integer getId() {
@@ -25,12 +26,15 @@ public class CheckInDesk extends Observable {
         notifyObservers(currentPassenger);
     }
 
-    public BaggageSize getCurrentBaggage() {
-        return currentBaggage;
+    public void close() {
+        this.open = false;
     }
 
-    public void setCurrentBaggage(BaggageSize currentBaggage) {
-        this.currentBaggage = currentBaggage;
-        notifyObservers(currentBaggage);
+    public Boolean getOpen() {
+        return open;
+    }
+
+    public void setOpen(Boolean open) {
+        this.open = open;
     }
 }

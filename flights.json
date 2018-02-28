@@ -14,6 +14,14 @@
       "Maximum Passengers": "200",
       "Maximum Baggage Weight": "1000",
       "Maximum Baggage Volume": "30000"
+    },
+    {
+      "Flight Code": "752",
+      "Destination Airport": "Edinburgh",
+      "Carrier": "SAS",
+      "Maximum Passengers": "150",
+      "Maximum Baggage Weight": "200",
+      "Maximum Baggage Volume": "1000"
     }
-  ]
+]
 

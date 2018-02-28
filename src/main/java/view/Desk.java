@@ -1,6 +1,6 @@
 package view;
 
-import model.CheckInDesk;
+import model.entity.CheckInDesk;
 
 import javax.swing.*;
 import java.util.Observable;

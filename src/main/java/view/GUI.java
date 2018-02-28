@@ -17,7 +17,7 @@ public class GUI extends JFrame {
 	public GUI () {
 
 		// set up the title of the window
-		this.setTitle("model.Booking view.GUI");
+		this.setTitle("model.entity.Booking view.GUI");
 
 		// call the two functions that set up the view.GUI
 		setupNorthPanel();
@@ -55,7 +55,7 @@ public class GUI extends JFrame {
 		//Set up the 3rd line for the booking reference
 		JPanel bookingRefPanel = new JPanel();
 		bookingRefPanel.setLayout(new GridLayout(1,2));
-		bookingRefPanel.add(new JLabel("model.Booking ref. code"));
+		bookingRefPanel.add(new JLabel("model.entity.Booking ref. code"));
 		bookingReferenceInput = new JTextField(15);
 		bookingRefPanel.add(bookingReferenceInput);
 

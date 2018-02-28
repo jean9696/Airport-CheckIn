@@ -1,7 +1,7 @@
-import model.BaggageSize;
-import model.Booking;
-import model.Flight;
-import model.Passenger;
+import model.entity.BaggageSize;
+import model.entity.Booking;
+import model.entity.Flight;
+import model.entity.PassengerInformation;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -81,7 +81,7 @@ public class FileHelper {
             {
                 JSONObject flight = (JSONObject) o;
 
-                String flightCode = (String) flight.get("Flight Code");
+                String flightCode = (String) flight.get("Flight Code").toString();
 
                 String destinationAirport = (String) flight.get("Destination Airport");
 
@@ -149,7 +149,7 @@ public class FileHelper {
 
                 BaggageSize baggage = new BaggageSize(baggageWeight, baggageVolume);
 
-                Passenger passenger = new Passenger(firstName, lastName, passengerAge, baggage);
+                PassengerInformation passenger = new PassengerInformation(firstName, lastName, passengerAge);
 
                 Booking bookingObject = new Booking(bookingReferenceCode, checkedIn, flight, baggage, passenger);
                 bookingHashMap.put(String.valueOf(bookingReferenceCode), bookingObject);

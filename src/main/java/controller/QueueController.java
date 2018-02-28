@@ -1,7 +1,10 @@
 package controller;
 
-import model.PassengerQueue;
+import model.collection.PassengerList;
+import model.collection.PassengerQueue;
+import model.entity.Passenger;
 
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class QueueController {
@@ -9,7 +12,7 @@ public class QueueController {
     private PassengerQueue passengerQueue;
 
     /**
-     * Constructor
+     * Constructpr
      * @param passengerQueue
      */
     public QueueController(PassengerQueue passengerQueue) {
@@ -17,16 +20,19 @@ public class QueueController {
     }
 
     /**
-     * @param loopSize
+     * @param passengers
      * Simulate the passenger arrival asynchronously
      */
-    public void simulatePassengerArrival(final Integer loopSize) {
+    public void simulatePassengerArrival(final PassengerList passengers) {
         final PassengerQueue passengerQueue = this.passengerQueue;
         new Thread(new Runnable() {
             public void run() {
-                for (int i=0; i<loopSize; i++) {
-                    passengerQueue.addFakeRandomPassenger();
-                    System.out.println(passengerQueue.poll() + " just arrived");  //TODO: remove that
+                while (!passengers.isEmpty()) {
+                    int index = new Random().nextInt(passengers.size());
+                    Passenger randomPassenger = passengers.get(index);
+                    passengerQueue.add(randomPassenger);
+                    passengers.remove(randomPassenger);
+                    System.out.println(randomPassenger + " just arrived");  //TODO: remove that
                     try {
                         // new passenger arrive at random time bewten 1/2sec and 3sec
                         Thread.sleep(ThreadLocalRandom.current().nextInt(500, 3000));

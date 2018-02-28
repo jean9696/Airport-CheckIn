@@ -1,4 +1,4 @@
-import model.Flight;
+import model.entity.Flight;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

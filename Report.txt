@@ -1,5 +1,5 @@
 List of flight's statistics after check-in
-model.Flight code       Nb passengers   Total weight (exceeded?)   Total volume (exceeded?)  Extra fees collected (£)
+model.entity.Flight code       Nb passengers   Total weight (exceeded?)   Total volume (exceeded?)  Extra fees collected (£)
 ---------------------------------------------------------------------------------------------
 123               0               0   (N)                    0   (N)                   0     
 789               2               100 (N)                    100 (N)                   664   

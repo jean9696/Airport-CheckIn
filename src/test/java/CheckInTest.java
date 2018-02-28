@@ -1,6 +1,6 @@
-import model.BaggageSize;
-import model.Booking;
-import model.Flight;
+import model.entity.BaggageSize;
+import model.entity.Booking;
+import model.entity.Flight;
 import org.junit.Before;
 import org.junit.Test;
 
