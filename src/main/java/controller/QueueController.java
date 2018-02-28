@@ -19,6 +19,17 @@ public class QueueController {
         this.passengerQueue = passengerQueue;
     }
 
+    private void addPassengerToQueue(Passenger passenger) {
+        passengerQueue.add(passenger);
+        System.out.println(passenger + " just arrived");  //TODO: remove that
+        try {
+            // new passenger arrive at random time between 1/2sec and 3sec
+            Thread.sleep(ThreadLocalRandom.current().nextInt(500, 3000));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * @param passengers
      * Simulate the passenger arrival asynchronously
@@ -30,15 +41,8 @@ public class QueueController {
                 while (!passengers.isEmpty()) {
                     int index = new Random().nextInt(passengers.size());
                     Passenger randomPassenger = passengers.get(index);
-                    passengerQueue.add(randomPassenger);
+                    addPassengerToQueue(randomPassenger);
                     passengers.remove(randomPassenger);
-                    System.out.println(randomPassenger + " just arrived");  //TODO: remove that
-                    try {
-                        // new passenger arrive at random time bewten 1/2sec and 3sec
-                        Thread.sleep(ThreadLocalRandom.current().nextInt(500, 3000));
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
                 }
             }
         }).start();

@@ -13,11 +13,11 @@ public class CheckInDeskController {
         this.checkInDesk = checkInDesk;
     }
 
-    public void checkInPassenger(Passenger passenger) {
+    private void checkInPassenger(Passenger passenger) {
         checkInDesk.setCurrentPassenger(passenger);
         if (checkInDesk.getCurrentPassenger() != null) {
             try {
-                // new passenger arrive at random time bewten 1/2sec and 3sec
+                // checkIn process last a random time between 1/2sec and 3sec
                 Thread.sleep(ThreadLocalRandom.current().nextInt(500, 3000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
