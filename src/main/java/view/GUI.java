@@ -193,7 +193,7 @@ public class GUI extends JFrame {
 	 * @param text
 	 * @return Integer
 	 */
-    protected Integer convertJTextStringToInt(String text) {
+    public Integer convertJTextStringToInt(String text) {
 	    try {
 	        return Integer.parseInt(text);
         } catch (java.lang.NumberFormatException e) {

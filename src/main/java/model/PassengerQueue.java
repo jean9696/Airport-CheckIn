@@ -2,9 +2,28 @@ package model;
 
 import java.util.*;
 
+import static model.Passenger.createFakeRandomPassenger;
+
 public class PassengerQueue extends Observable implements Queue<Passenger> {
 
     private LinkedList<Passenger> passengers;
+
+    public PassengerQueue() {
+        super();
+        this.passengers = new LinkedList<Passenger>();
+    }
+
+    public static PassengerQueue createFakeRandomQueue(Integer size) {
+        PassengerQueue passengerQueue = new PassengerQueue();
+        for (int i=0; i<size; i++) {
+            passengerQueue.addFakeRandomPassenger();
+        }
+        return passengerQueue;
+    }
+
+    public void addFakeRandomPassenger() {
+        this.add(createFakeRandomPassenger());
+    }
 
     @Override
     public int size() {

@@ -13,7 +13,7 @@ import static junit.framework.TestCase.assertTrue;
 public class PassengerTest {
 
     static public Passenger createTestPassenger() throws Exception {
-        return new Passenger("Jon", "Doe", 48);
+        return new Passenger("Jon", "Doe", 48, BaggageSizeTest.createTestBaggageSize());
     }
 
     @Test
@@ -21,7 +21,7 @@ public class PassengerTest {
         boolean thrown = false;
 
         try {
-            new Passenger("", "", -10);
+            new Passenger("", "", -10, BaggageSizeTest.createTestBaggageSize());
         } catch (Exception e) {
             thrown = true;
         }

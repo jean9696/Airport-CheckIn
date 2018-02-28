@@ -74,23 +74,23 @@ public class FileHelperTest {
         HashMap<String, Booking> testBookings = FileHelper.readBookingsFromInputFiles(testFlights);
         Flight testFlight = FileHelper.readFlightsFromInputFiles().get("789");
         BaggageSize testBaggage = new BaggageSize(2, 1);
-        Passenger testPassenger = new Passenger("Bob", "Bobson", 13);
+        Passenger testPassenger = new Passenger("Bob", "Bobson", 13, new BaggageSize(1, 2));
         Booking testBooking = new Booking(123, false, testFlight, testBaggage, testPassenger);
 
         // Equals Tests
-        assertEquals("Error in readBookings: model.Booking ID",
+        assertEquals("Error in readBookings: Booking ID",
                 testBooking.getBookId(),
                 testBookings.get("123").getBookId()
         );
-        assertEquals("Error in readBookings: model.Passenger Last Name",
+        assertEquals("Error in readBookings: Passenger Last Name",
                 testBooking.getPassenger().getLastname(),
                 testBookings.get("123").getPassenger().getLastname()
         );
-        assertEquals("Error in readBookings: model.Passenger First Name",
+        assertEquals("Error in readBookings: Passenger First Name",
                 testBooking.getPassenger().getSurname(),
                 testBookings.get("123").getPassenger().getSurname()
         );
-        assertEquals("Error in readBookings: model.Passenger Age",
+        assertEquals("Error in readBookings: Passenger Age",
                 testBooking.getPassenger().getAge(),
                 testBookings.get("123").getPassenger().getAge()
         );
@@ -106,25 +106,25 @@ public class FileHelperTest {
                 testBooking.getCheckedIn(),
                 testBookings.get("123").getCheckedIn()
         );
-        assertEquals("Error in readBookings: model.Flight Code",
+        assertEquals("Error in readBookings: Flight Code",
                 testBooking.getFlight().getFlightCode(),
                 testBookings.get("123").getFlight().getFlightCode()
         );
 
         // Not Equals Tests
-        assertNotEquals("Error in readBookings: model.Booking ID",
+        assertNotEquals("Error in readBookings: Booking ID",
                 testBooking.getBookId(),
                 testBookings.get("456").getBookId()
         );
-        assertNotEquals("Error in readBookings: model.Passenger Last Name",
+        assertNotEquals("Error in readBookings: Passenger Last Name",
                 testBooking.getPassenger().getLastname(),
                 testBookings.get("456").getPassenger().getLastname()
         );
-        assertNotEquals("Error in readBookings: model.Passenger First Name",
+        assertNotEquals("Error in readBookings: Passenger First Name",
                 testBooking.getPassenger().getSurname(),
                 testBookings.get("456").getPassenger().getSurname()
         );
-        assertNotEquals("Error in readBookings: model.Passenger Age",
+        assertNotEquals("Error in readBookings: Passenger Age",
                 testBooking.getPassenger().getAge(),
                 testBookings.get("456").getPassenger().getAge()
         );

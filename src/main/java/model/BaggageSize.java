@@ -1,5 +1,7 @@
 package model;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * Contains information about baggage size
  * Can be either just information of the capacity or a passenger's baggage
@@ -15,6 +17,12 @@ public class BaggageSize {
     public BaggageSize(Integer weight, Integer volume) {
         this.weight = weight;
         this.volume = volume;
+    }
+
+    public static BaggageSize createRandomBaggage() {
+        int weight = ThreadLocalRandom.current().nextInt(1, 100);
+        int volume = ThreadLocalRandom.current().nextInt(1, 100);
+        return new BaggageSize(weight, volume);
     }
 
     /**

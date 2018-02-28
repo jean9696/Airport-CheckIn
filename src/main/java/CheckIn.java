@@ -1,7 +1,5 @@
-import model.BaggageSize;
-import model.Booking;
-import model.FileHelper;
-import model.Flight;
+import controller.QueueController;
+import model.*;
 import view.GUI;
 
 import java.awt.event.ActionEvent;
@@ -97,6 +95,28 @@ public class CheckIn {
      * Starting point of the program, initialize variables and launch the view.GUI with the listener
      */
     public static void main (String[] args) throws Exception {
+
+        final HashMap<String, Flight> flights = FileHelper.readFlightsFromInputFiles();
+        HashMap<String, Booking> bookings = FileHelper.readBookingsFromInputFiles(flights);
+
+        // Queue
+        PassengerQueue passengerQueue = PassengerQueue.createFakeRandomQueue(10);
+        QueueController queueController = new QueueController(passengerQueue);
+        queueController.simulatePassengerArrival(10); // async
+
+        //Desk(s)
+
+        //Flight(s)
+
+        //run GUI with obervables
+
+    }
+
+    /**
+     * @param args
+     * Starting point of the program, initialize variables and launch the view.GUI with the listener
+     */
+    public static void main2 (String[] args) throws Exception {
 
         // should come from files
         final HashMap<String, Flight> flights = FileHelper.readFlightsFromInputFiles();
