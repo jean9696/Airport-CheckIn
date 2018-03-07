@@ -16,7 +16,7 @@ public class CheckInTest {
     public void setUp() throws Exception {
         HashMap<String, Flight> flights = new HashMap<String, Flight>();
         HashMap<String, Booking> bookings = new HashMap<String, Booking>();
-        checkIn = new CheckIn(flights, bookings);
+        checkIn = new CheckIn();
 
     }
 

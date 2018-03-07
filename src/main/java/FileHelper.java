@@ -1,3 +1,5 @@
+import model.collection.BookingList;
+import model.collection.FlightList;
 import model.entity.BaggageSize;
 import model.entity.Booking;
 import model.entity.Flight;
@@ -71,9 +73,9 @@ public class FileHelper {
     /**
      * @return flights got from input files
      */
-    public static HashMap<String, Flight> readFlightsFromInputFiles() {
+    public static void readFlightsFromInputFiles() {
         JSONParser jsonParser = new JSONParser();
-        HashMap<String, Flight> flightHashMap = new HashMap<String, Flight>();
+        FlightList flightHashMap = FlightList.getInstance();
         try  {
             JSONArray flightsArray = (JSONArray) jsonParser.parse(new FileReader("./flights.json"));
 
@@ -108,17 +110,21 @@ public class FileHelper {
             System.out.println(e + "IOException");
             System.exit(1);
         }
-        return flightHashMap;
     }
 
     /**
-     * @param flightList
      * @return bookings got from input file
      */
-    public static HashMap<String, Booking> readBookingsFromInputFiles(HashMap<String, Flight> flightList) throws Exception {
+    public static void readBookingsFromInputFiles() throws Exception {
+
+        // Call the read flights method if the FlightList instance is empty
+        FlightList flightList = FlightList.getInstance();
+        if (flightList.isEmpty()) {
+            readFlightsFromInputFiles();
+        }
 
         JSONParser jsonParser = new JSONParser();
-        HashMap<String, Booking> bookingHashMap = new HashMap<String, Booking>();
+        BookingList bookingHashMap = BookingList.getInstance();
 
         try  {
 
@@ -164,7 +170,6 @@ public class FileHelper {
             System.out.println(e + "IOException");
             System.exit(1);
         }
-        return bookingHashMap;
 
     }
 }

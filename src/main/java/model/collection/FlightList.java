@@ -1,6 +1,10 @@
 package model.collection;
 
-public class FlightList {
+import model.entity.Flight;
+
+import java.util.HashMap;
+
+public class FlightList extends HashMap<String,Flight>{
     private static FlightList ourInstance = new FlightList();
 
     public static FlightList getInstance() {
@@ -8,5 +12,6 @@ public class FlightList {
     }
 
     private FlightList() {
+        super();
     }
 }
