@@ -68,6 +68,7 @@ public class CheckInDeskController {
                     try {
                         checkInPassenger(passengerQueue.poll());
                     } catch (Exception e) {
+                        // Print a message if something went wrong during the check in
                         JOptionPane.showMessageDialog(null, e);
                         e.printStackTrace();
                     }
