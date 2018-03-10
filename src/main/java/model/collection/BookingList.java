@@ -5,7 +5,7 @@ import model.entity.Passenger;
 
 import java.util.HashMap;
 
-public class BookingList extends HashMap<String,Booking>{
+public class BookingList extends HashMap<Integer, Booking>{
     private static BookingList ourInstance = new BookingList();
 
     public static BookingList getInstance() {
