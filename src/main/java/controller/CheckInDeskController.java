@@ -3,6 +3,7 @@ package controller;
 import model.collection.BookingList;
 import model.collection.PassengerQueue;
 import model.entity.*;
+//import FileHelper;
 
 import javax.swing.*;
 import java.util.Date;
@@ -23,7 +24,9 @@ public class CheckInDeskController {
         checkInDesk.setCurrentPassenger(passenger);
         if (checkInDesk.getCurrentPassenger() != null) {
             try {
+
                 // checkIn process last a random time between 2sec and 5sec
+                Log.getInstance().addToLog(checkInDesk.getCurrentPassenger().getSurname() + " " + checkInDesk.getCurrentPassenger().getLastname() + " is checking in");
                 Thread.sleep(ThreadLocalRandom.current().nextInt(2000, 5000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -44,6 +47,7 @@ public class CheckInDeskController {
                 passengerFlight.addExtraFees(extraFees);
                 System.out.println(checkInDesk.getCurrentPassenger() + " has checked in"); // TODO: remove that
             }
+
         }
     }
 
@@ -73,8 +77,13 @@ public class CheckInDeskController {
                         e.printStackTrace();
                     }
                 }
+                checkInDesk.close();
+                Log.getInstance().addToLog("Checkin desk " + checkInDesk.getId() + " has closed");
+                System.out.println("CheckIn desk " + checkInDesk.getId() + " is closing after " + ((new Date().getTime() - timer) / 1000) + "s");
                 closeCheckInDesk(timer);
             }
         }).start();
+        System.out.println("write to file called here");
+        //FileHelper.writeToFile("Report.txt",Log.getInstance().getLog());
     }
 }

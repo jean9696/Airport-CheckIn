@@ -32,7 +32,8 @@ public class CheckIn {
             CheckInDesk checkInDesk = new CheckInDesk(i);
             CheckInDeskController checkInDeskController = new CheckInDeskController(checkInDesk);
             checkInDeskController.simulateCheckIn(passengerQueue, 60); //async
-        }
+       }
+
 
         //Flight(s)
         for (Flight flight : FlightList.getInstance().values()) {
