@@ -1,3 +1,5 @@
+package helpers;
+
 import model.collection.BookingList;
 import model.collection.FlightList;
 import model.entity.BaggageSize;
@@ -16,6 +18,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import static java.lang.Integer.parseInt;
+
 
 /**
  * Class containing static function to write and read files

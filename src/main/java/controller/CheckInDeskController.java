@@ -1,9 +1,9 @@
 package controller;
 
+import helpers.FileHelper;
 import model.collection.BookingList;
 import model.collection.PassengerQueue;
 import model.entity.*;
-//import FileHelper;
 
 import javax.swing.*;
 import java.util.Date;
@@ -58,6 +58,7 @@ public class CheckInDeskController {
     private void closeCheckInDesk(long timer) {
         System.out.println("CheckIn desk " + checkInDesk.getId() + " is closing after " + ((new Date().getTime() - timer) / 1000) + "s");
         this.checkInDesk.close();
+        FileHelper.writeToFile("log.txt", Log.getInstance().getLog());
     }
 
     /**
@@ -84,6 +85,6 @@ public class CheckInDeskController {
             }
         }).start();
         System.out.println("write to file called here");
-        //FileHelper.writeToFile("Report.txt",Log.getInstance().getLog());
+        //helpers.FileHelper.writeToFile("Report.txt",Log.getInstance().getLog());
     }
 }

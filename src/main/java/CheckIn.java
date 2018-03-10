@@ -1,5 +1,6 @@
 import controller.CheckInDeskController;
 import controller.QueueController;
+import helpers.FileHelper;
 import model.collection.BookingList;
 import model.collection.FlightList;
 import model.collection.PassengerList;

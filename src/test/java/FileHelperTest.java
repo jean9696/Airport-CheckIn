@@ -1,3 +1,4 @@
+import helpers.FileHelper;
 import model.collection.BookingList;
 import model.collection.FlightList;
 import model.entity.BaggageSize;
@@ -5,8 +6,6 @@ import model.entity.Booking;
 import model.entity.Flight;
 import model.entity.PassengerInformation;
 import org.junit.Test;
-
-import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
