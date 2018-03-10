@@ -4,60 +4,12 @@ import model.collection.BookingList;
 import model.collection.FlightList;
 import model.collection.PassengerList;
 import model.collection.PassengerQueue;
-import model.entity.*;
-import view.GUI;
+import model.entity.CheckInDesk;
+import model.entity.Flight;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.HashMap;
 
-/**
- * Contains flights and bookings available in database
- * Has the main function that displays the view.GUI to checkIn passengers
- */
 public class CheckIn {
 
-    private Integer checkInPassenger;
-
-    /**
-     */
-    public CheckIn() {
-        this.checkInPassenger = 0;
-    }
-
-
-    /**
-     * @return how many passenger has checked in
-     */
-    public Integer getCheckInPassenger() {
-        return checkInPassenger;
-    }
-
-    /**
-     * Check in the passenger by incrementing the total of passengers who have checkedIn
-     * and set add this passenger baggage to the corresponding flight
-     * @param booking
-     * @param passengerBaggage
-     */
-    public void checkInPassenger(Booking booking, BaggageSize passengerBaggage) {
-        booking.setCheckedIn(true);
-        Flight passengerFlight = booking.getFlight();
-        passengerFlight.addOnePassenger();
-        passengerFlight.addBaggageRegistered(passengerBaggage);
-        checkInPassenger++;
-    }
-
-    /**
-     * Polymorphism of checkInPassenger above to increment extra fees counter
-     * @param booking
-     * @param passengerBaggage
-     * @param extraFees
-     */
-    public void checkInPassenger (Booking booking, BaggageSize passengerBaggage, Integer extraFees) {
-        Flight passengerFlight = booking.getFlight();
-        passengerFlight.addExtraFees(extraFees);
-        checkInPassenger(booking, passengerBaggage);
-    }
 
     /**
      * @param args
@@ -69,7 +21,6 @@ public class CheckIn {
         FileHelper.readBookingsFromInputFiles();
 
         PassengerList passengers = BookingList.getInstance().getPassengerList();
-
 
         // Queue
         PassengerQueue passengerQueue = new PassengerQueue(passengers.getRandomPassengersToQueue(10));

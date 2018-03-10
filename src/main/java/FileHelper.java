@@ -158,7 +158,7 @@ public class FileHelper {
                 PassengerInformation passenger = new PassengerInformation(firstName, lastName, passengerAge);
 
                 Booking bookingObject = new Booking(bookingReferenceCode, checkedIn, flight, baggage, passenger);
-                bookingHashMap.put(String.valueOf(bookingReferenceCode), bookingObject);
+                bookingHashMap.put(bookingReferenceCode, bookingObject);
             }
         } catch (FileNotFoundException e) {
             System.out.println(e + " File not found");

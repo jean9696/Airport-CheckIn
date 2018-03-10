@@ -123,6 +123,7 @@ public class Flight extends Observable {
      */
     public void addBaggageRegistered(BaggageSize baggageRegistered) {
         this.baggageRegistered.addBaggage(baggageRegistered);
+        notifyObservers(this.baggageRegistered);
     }
 
     /**
