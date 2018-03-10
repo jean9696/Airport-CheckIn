@@ -80,7 +80,6 @@ public class CheckInDeskController {
                 }
                 checkInDesk.close();
                 Log.getInstance().addToLog("Checkin desk " + checkInDesk.getId() + " has closed");
-                System.out.println("CheckIn desk " + checkInDesk.getId() + " is closing after " + ((new Date().getTime() - timer) / 1000) + "s");
                 closeCheckInDesk(timer);
             }
         }).start();

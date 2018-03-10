@@ -1,5 +1,8 @@
 package model.entity;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Log {
 
     private String logReport;
@@ -11,7 +14,7 @@ public class Log {
     }
 
     private Log() {
-        logReport += "Logs of the previous simulation:\n";
+        logReport = "Logs of the previous simulation:\n";
     }
 
     /**
@@ -20,7 +23,7 @@ public class Log {
      * @return The updated logReport string
      */
     public String addToLog(String text) {
-        logReport += "\n" + text;
+        logReport += getCurrentTimeStamp() + ": " + text + "\n";
         return logReport;
     }
 
@@ -30,5 +33,12 @@ public class Log {
      */
     public String getLog() {
         return logReport;
+    }
+
+    /**
+     * @return the current time stamp
+     */
+    private String getCurrentTimeStamp() {
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
     }
 }
