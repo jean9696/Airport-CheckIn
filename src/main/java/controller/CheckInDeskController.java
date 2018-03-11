@@ -40,6 +40,7 @@ public class CheckInDeskController {
             }
             if (passengerBooking.canPassengerAccess(currentPassenger.getSurname(), currentPassenger.getLastname())) {
                 passengerBooking.setCheckedIn(true);
+                Log.getInstance().addToLog(currentPassenger.getSurname() + " " + currentPassenger.getLastname() + " has checked in");
                 Flight passengerFlight = passengerBooking.getFlight();
                 passengerFlight.addOnePassenger();
                 passengerFlight.addBaggageRegistered(passengerBooking.getBaggageSize());
