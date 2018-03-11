@@ -24,7 +24,6 @@ public class QueueController {
     private void addPassengerToQueue(Passenger passenger) {
         passengerQueue.add(passenger);
         Log.getInstance().addToLog(passenger.getSurname() + " " + passenger.getLastname() + " has joined the queue");
-        System.out.println(passenger + " just arrived");  //TODO: remove that
         try {
             // new passenger arrives at random time between 1/2sec and 3sec
             Thread.sleep(ThreadLocalRandom.current().nextInt(500, 3000));

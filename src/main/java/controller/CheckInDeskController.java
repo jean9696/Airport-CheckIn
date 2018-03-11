@@ -45,9 +45,7 @@ public class CheckInDeskController {
                 passengerFlight.addBaggageRegistered(passengerBooking.getBaggageSize());
                 Integer extraFees = currentPassenger.getBaggage().calculateOverCapacityPrice(passengerBooking.getBaggageSize());
                 passengerFlight.addExtraFees(extraFees);
-                System.out.println(checkInDesk.getCurrentPassenger() + " has checked in"); // TODO: remove that
             }
-
         }
     }
 
@@ -56,7 +54,6 @@ public class CheckInDeskController {
      * @param timer
      */
     private void closeCheckInDesk(long timer) {
-        System.out.println("CheckIn desk " + checkInDesk.getId() + " is closing after " + ((new Date().getTime() - timer) / 1000) + "s");
         this.checkInDesk.close();
         FileHelper.writeToFile("log.txt", Log.getInstance().getLog());
     }
@@ -80,11 +77,8 @@ public class CheckInDeskController {
                 }
                 checkInDesk.close();
                 Log.getInstance().addToLog("Checkin desk " + checkInDesk.getId() + " has closed");
-                System.out.println("CheckIn desk " + checkInDesk.getId() + " is closing after " + ((new Date().getTime() - timer) / 1000) + "s");
                 closeCheckInDesk(timer);
             }
         }).start();
-        System.out.println("write to file called here");
-        //helpers.FileHelper.writeToFile("Report.txt",Log.getInstance().getLog());
     }
 }
