@@ -36,14 +36,14 @@ public class Desk extends JPanel implements Observer {
         return deskPanel;
     }
 
-    public void updateDesk(Passenger person) {
+    private void updateDesk(Passenger person) {
         deskText.setText(person.getFirstname() + " " + person.getLastname() + " is dropping of 1 bag of " +
                 person.getBaggage().getWeight() + "kg. A baggage fee of £" +
                         person.getBaggage().calculateOverCapacityPrice(person.getBaggage()) + " is due"
         );
     }
 
-    public void emptyDesk() {
+    private void emptyDesk() {
         deskText.setText("No passenger is being served");
     }
 }

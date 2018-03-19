@@ -20,11 +20,11 @@ public class Queue extends JPanel implements Observer {
         queuePanel.add(scrollPane);
     }
 
-    JLabel queueText = new JLabel();
-    JPanel queuePanel = new JPanel();
-    JTextArea passengerArea = new JTextArea();
-    JScrollPane scrollPane = new JScrollPane(passengerArea);
-    LinkedList<Passenger> passengers;
+    private JLabel queueText = new JLabel();
+    private JPanel queuePanel = new JPanel();
+    private JTextArea passengerArea = new JTextArea();
+    private JScrollPane scrollPane = new JScrollPane(passengerArea);
+    private LinkedList<Passenger> passengers;
 
     @Override
     public void update(Observable o, Object arg) {

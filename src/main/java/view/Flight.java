@@ -7,9 +7,9 @@ import java.util.Observer;
 
 public class Flight extends JPanel implements Observer {
 
-    JLabel flightText = new JLabel();
-    JLabel passengersCheckedIn = new JLabel();
-    JLabel baggageCheckedIn = new JLabel();
+    private JLabel flightText = new JLabel();
+    private JLabel passengersCheckedIn = new JLabel();
+    private JLabel baggageCheckedIn = new JLabel();
 
     public Flight(Observable observable) {
         observable.addObserver(this);
@@ -34,11 +34,11 @@ public class Flight extends JPanel implements Observer {
         return flightPanel;
     }
 
-    public void setPassengerText(model.entity.Flight flight) {
+    private void setPassengerText(model.entity.Flight flight) {
         passengersCheckedIn.setText(flight.getNbPassengersRegistered() + " passengers checked in");
     }
 
-    public void setBaggageText(model.entity.Flight flight) {
+    private void setBaggageText(model.entity.Flight flight) {
         baggageCheckedIn.setText(flight.getBaggageRegistered().getWeight() + "kg of baggage checked in");
     }
 }
