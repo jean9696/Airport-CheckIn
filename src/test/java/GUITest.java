@@ -13,7 +13,7 @@ import static junit.framework.Assert.assertEquals;
 public class GUITest { 
 
 
-    @Test
+    /*i@Test
     public void convertJTextStringToInt() {
         GUI GUI = new GUI();
         assertEquals(GUI.convertJTextStringToInt(""),  null);
@@ -31,5 +31,5 @@ public class GUITest {
         assertEquals(GUI.getSurnameInput(),  "");
         assertEquals(GUI.getBookingReferenceInput(),  "");
     }
-
+*/
 } 

@@ -8,6 +8,7 @@ import view.GUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
  * Contains flights and bookings available in database
@@ -114,10 +115,12 @@ public class CheckIn {
         queueController.simulatePassengerArrival(passengers); // async
 
         //Desk(s)
-       for (int i=0;i<2;i++) {
+        LinkedList<CheckInDesk> deskList = new LinkedList<>();
+        for (int i=0;i<2;i++) {
             CheckInDesk checkInDesk = new CheckInDesk(i);
             CheckInDeskController checkInDeskController = new CheckInDeskController(checkInDesk);
             checkInDeskController.simulateCheckIn(passengerQueue, 60); //async
+            deskList.add(checkInDesk);
         }
 
         //Flight(s)
@@ -126,14 +129,14 @@ public class CheckIn {
         }
 
         //run GUI with obervables
-
+        final GUI GUI = new GUI(passengerQueue, deskList, flights);
     }
 
     /**
      * @param args
      * Starting point of the program, initialize variables and launch the view.GUI with the listener
      */
-    public static void main2 (String[] args) throws Exception {
+    /*public static void main2 (String[] args) throws Exception {
 
         // should come from files
         final HashMap<String, Flight> flights = FileHelper.readFlightsFromInputFiles();
@@ -141,6 +144,7 @@ public class CheckIn {
 
         final Integer bookingNumber = bookings.size();
         final CheckIn checkIn = new CheckIn(flights, bookings);
+
         final GUI GUI = new GUI();
         ActionListener handleConfirm = new ActionListener() {
             @Override
@@ -181,6 +185,6 @@ public class CheckIn {
         };
         GUI.setOnConfirm(handleConfirm);
 
-    }
+    }*/
 
 }
