@@ -1,108 +1,115 @@
 Logs of the previous simulation:
-2018-03-19 19:46:14: Vance Watts has joined the queue
-2018-03-19 19:46:16: Frazier Sears has joined the queue
-2018-03-19 19:46:17: Johnson Mathews has joined the queue
-2018-03-19 19:46:17: Chang Brown has checked in
-2018-03-19 19:46:17: Melisa Avila is checking in
-2018-03-19 19:46:18: White Estes has checked in
-2018-03-19 19:46:18: Elsa Brock is checking in
-2018-03-19 19:46:19: Kelly Prince has joined the queue
-2018-03-19 19:46:20: Melisa Avila has checked in
-2018-03-19 19:46:20: Peterson Woodard is checking in
-2018-03-19 19:46:21: Elsa Brock has checked in
-2018-03-19 19:46:21: Slater Welch is checking in
-2018-03-19 19:46:21: Noelle Norris has joined the queue
-2018-03-19 19:46:23: Peterson Woodard has checked in
-2018-03-19 19:46:23: Marquez Rodriquez is checking in
-2018-03-19 19:46:23: Goldie Mejia has joined the queue
-2018-03-19 19:46:25: Slater Welch has checked in
-2018-03-19 19:46:25: Grimes Morrow is checking in
-2018-03-19 19:46:25: Griffith Valentine has joined the queue
-2018-03-19 19:46:25: Marquez Rodriquez has checked in
-2018-03-19 19:46:25: Britney Roach is checking in
-2018-03-19 19:46:28: Hannah Lee has joined the queue
-2018-03-19 19:46:29: Grimes Morrow has checked in
-2018-03-19 19:46:29: Hancock Hale is checking in
-2018-03-19 19:46:30: Desiree Peters has joined the queue
-2018-03-19 19:46:30: Britney Roach has checked in
-2018-03-19 19:46:30: Vance Watts is checking in
-2018-03-19 19:46:31: Sullivan Owen has joined the queue
-2018-03-19 19:46:33: Hancock Hale has checked in
-2018-03-19 19:46:33: Frazier Sears is checking in
-2018-03-19 19:46:33: Augusta Hubbard has joined the queue
-2018-03-19 19:46:35: Frazier Sears has checked in
-2018-03-19 19:46:35: Johnson Mathews is checking in
-2018-03-19 19:46:35: Vance Watts has checked in
-2018-03-19 19:46:35: Kelly Prince is checking in
-2018-03-19 19:46:36: Katherine Reid has joined the queue
-2018-03-19 19:46:38: Kelly Prince has checked in
-2018-03-19 19:46:38: Noelle Norris is checking in
-2018-03-19 19:46:38: Johnson Mathews has checked in
-2018-03-19 19:46:38: Goldie Mejia is checking in
-2018-03-19 19:46:39: Elsa Finley has joined the queue
-2018-03-19 19:46:40: Deanna Manning has joined the queue
-2018-03-19 19:46:40: Noelle Norris has checked in
-2018-03-19 19:46:40: Griffith Valentine is checking in
-2018-03-19 19:46:40: Leola Vazquez has joined the queue
-2018-03-19 19:46:41: Sarah Perez has joined the queue
-2018-03-19 19:46:43: Mercer Thompson has joined the queue
-2018-03-19 19:46:43: Goldie Mejia has checked in
-2018-03-19 19:46:43: Hannah Lee is checking in
-2018-03-19 19:46:44: Lott Robertson has joined the queue
-2018-03-19 19:46:45: Griffith Valentine has checked in
-2018-03-19 19:46:45: Desiree Peters is checking in
-2018-03-19 19:46:45: Hannah Lee has checked in
-2018-03-19 19:46:45: Sullivan Owen is checking in
-2018-03-19 19:46:47: Henson Garner has joined the queue
-2018-03-19 19:46:47: Shawna Morse has joined the queue
-2018-03-19 19:46:48: Pugh Santiago has joined the queue
-2018-03-19 19:46:49: Sullivan Owen has checked in
-2018-03-19 19:46:49: Augusta Hubbard is checking in
-2018-03-19 19:46:49: Jim Johnson has joined the queue
-2018-03-19 19:46:49: Desiree Peters has checked in
-2018-03-19 19:46:49: Katherine Reid is checking in
-2018-03-19 19:46:51: Mandy Ramsey has joined the queue
-2018-03-19 19:46:51: Katherine Reid has checked in
-2018-03-19 19:46:51: Elsa Finley is checking in
-2018-03-19 19:46:52: Augusta Hubbard has checked in
-2018-03-19 19:46:52: Deanna Manning is checking in
-2018-03-19 19:46:53: Keri Klein has joined the queue
-2018-03-19 19:46:54: Lorena Sanchez has joined the queue
-2018-03-19 19:46:55: Carissa Taylor has joined the queue
-2018-03-19 19:46:55: Deanna Manning has checked in
-2018-03-19 19:46:55: Leola Vazquez is checking in
-2018-03-19 19:46:56: Elsa Finley has checked in
-2018-03-19 19:46:56: Sarah Perez is checking in
-2018-03-19 19:46:57: Leola Vazquez has checked in
-2018-03-19 19:46:57: Mercer Thompson is checking in
-2018-03-19 19:46:57: Pearl Brewer has joined the queue
-2018-03-19 19:46:58: Melinda Hess has joined the queue
-2018-03-19 19:47:00: Reba Hickman has joined the queue
-2018-03-19 19:47:00: Sarah Perez has checked in
-2018-03-19 19:47:00: Lott Robertson is checking in
-2018-03-19 19:47:01: Mercer Thompson has checked in
-2018-03-19 19:47:01: Henson Garner is checking in
-2018-03-19 19:47:02: Alexandra Fuentes has joined the queue
-2018-03-19 19:47:04: Sims David has joined the queue
-2018-03-19 19:47:05: Lott Robertson has checked in
-2018-03-19 19:47:05: Shawna Morse is checking in
-2018-03-19 19:47:05: Tammi Meyers has joined the queue
-2018-03-19 19:47:06: Henson Garner has checked in
-2018-03-19 19:47:06: Pugh Santiago is checking in
-2018-03-19 19:47:06: Cathryn Mcgowan has joined the queue
-2018-03-19 19:47:07: Shawna Morse has checked in
-2018-03-19 19:47:07: Jim Johnson is checking in
-2018-03-19 19:47:09: Richards Bird has joined the queue
-2018-03-19 19:47:10: Pugh Santiago has checked in
-2018-03-19 19:47:10: Mandy Ramsey is checking in
-2018-03-19 19:47:11: Jim Johnson has checked in
-2018-03-19 19:47:11: Keri Klein is checking in
-2018-03-19 19:47:12: Molina Melendez has joined the queue
-2018-03-19 19:47:12: Mandy Ramsey has checked in
-2018-03-19 19:47:12: Lorena Sanchez is checking in
-2018-03-19 19:47:12: Janice Griffith has joined the queue
-2018-03-19 19:47:14: Bob Bobson has joined the queue
-2018-03-19 19:47:15: Keri Klein has checked in
-2018-03-19 19:47:15: Checkin desk 1 has closed
-2018-03-19 19:47:15: Lorena Sanchez has checked in
-2018-03-19 19:47:15: Checkin desk 0 has closed
+2018-03-19 22:23:10: Frazier Sears is checking in
+2018-03-19 22:23:12: Griffith Valentine has joined the queue
+2018-03-19 22:23:13: Ebony Bartlett has joined the queue
+2018-03-19 22:23:13: Frazier Sears has checked in
+2018-03-19 22:23:13: Ladonna Greer is checking in
+2018-03-19 22:23:13: Weber Duffy has checked in
+2018-03-19 22:23:13: Hannah Lee is checking in
+2018-03-19 22:23:14: Chang Brown has joined the queue
+2018-03-19 22:23:15: White Estes has joined the queue
+2018-03-19 22:23:16: Pearl Brewer has joined the queue
+2018-03-19 22:23:16: Ladonna Greer has checked in
+2018-03-19 22:23:16: Pugh Santiago is checking in
+2018-03-19 22:23:17: Noelle Norris has joined the queue
+2018-03-19 22:23:18: Hannah Lee has checked in
+2018-03-19 22:23:18: Peterson Woodard is checking in
+2018-03-19 22:23:18: Pugh Santiago has checked in
+2018-03-19 22:23:18: Jeannette Hendrix is checking in
+2018-03-19 22:23:18: Dean Orr has joined the queue
+2018-03-19 22:23:20: Richards Bird has joined the queue
+2018-03-19 22:23:20: Jeannette Hendrix has checked in
+2018-03-19 22:23:20: Augusta Hubbard is checking in
+2018-03-19 22:23:21: Slater Welch has joined the queue
+2018-03-19 22:23:22: Peterson Woodard has checked in
+2018-03-19 22:23:22: Keri Klein is checking in
+2018-03-19 22:23:23: Jim Johnson has joined the queue
+2018-03-19 22:23:23: Britney Roach has joined the queue
+2018-03-19 22:23:24: Augusta Hubbard has checked in
+2018-03-19 22:23:24: Pratt Sheppard is checking in
+2018-03-19 22:23:26: Reba Hickman has joined the queue
+2018-03-19 22:23:26: Keri Klein has checked in
+2018-03-19 22:23:27: Carissa Taylor is checking in
+2018-03-19 22:23:27: Pratt Sheppard has checked in
+2018-03-19 22:23:27: Griffith Valentine is checking in
+2018-03-19 22:23:27: Alexandra Fuentes has joined the queue
+2018-03-19 22:23:28: Marquez Rodriquez has joined the queue
+2018-03-19 22:23:29: Carissa Taylor has checked in
+2018-03-19 22:23:29: Ebony Bartlett is checking in
+2018-03-19 22:23:30: Molina Melendez has joined the queue
+2018-03-19 22:23:32: Griffith Valentine has checked in
+2018-03-19 22:23:32: Chang Brown is checking in
+2018-03-19 22:23:32: Paul Buckley has joined the queue
+2018-03-19 22:23:33: Ebony Bartlett has checked in
+2018-03-19 22:23:33: White Estes is checking in
+2018-03-19 22:23:34: Chang Brown has checked in
+2018-03-19 22:23:34: Pearl Brewer is checking in
+2018-03-19 22:23:34: Elsa Brock has joined the queue
+2018-03-19 22:23:35: Mccormick Waller has joined the queue
+2018-03-19 22:23:35: White Estes has checked in
+2018-03-19 22:23:35: Noelle Norris is checking in
+2018-03-19 22:23:36: Janice Griffith has joined the queue
+2018-03-19 22:23:36: Pearl Brewer has checked in
+2018-03-19 22:23:36: Dean Orr is checking in
+2018-03-19 22:23:38: Katherine Reid has joined the queue
+2018-03-19 22:23:39: Melisa Avila has joined the queue
+2018-03-19 22:23:40: Dean Orr has checked in
+2018-03-19 22:23:40: Richards Bird is checking in
+2018-03-19 22:23:40: Noelle Norris has checked in
+2018-03-19 22:23:40: Slater Welch is checking in
+2018-03-19 22:23:41: Deanna Manning has joined the queue
+2018-03-19 22:23:41: Tammi Meyers has joined the queue
+2018-03-19 22:23:42: Slater Welch has checked in
+2018-03-19 22:23:42: Jim Johnson is checking in
+2018-03-19 22:23:43: Klein Curtis has joined the queue
+2018-03-19 22:23:44: Richards Bird has checked in
+2018-03-19 22:23:44: Britney Roach is checking in
+2018-03-19 22:23:45: Carla Sharpe has joined the queue
+2018-03-19 22:23:45: Sullivan Owen has joined the queue
+2018-03-19 22:23:45: Jim Johnson has checked in
+2018-03-19 22:23:45: Reba Hickman is checking in
+2018-03-19 22:23:47: Nikki Armstrong has joined the queue
+2018-03-19 22:23:48: Britney Roach has checked in
+2018-03-19 22:23:48: Alexandra Fuentes is checking in
+2018-03-19 22:23:48: Melinda Hess has joined the queue
+2018-03-19 22:23:49: Reba Hickman has checked in
+2018-03-19 22:23:49: Marquez Rodriquez is checking in
+2018-03-19 22:23:51: Alexandra Fuentes has checked in
+2018-03-19 22:23:51: Molina Melendez is checking in
+2018-03-19 22:23:51: Lorena Sanchez has joined the queue
+2018-03-19 22:23:52: Marquez Rodriquez has checked in
+2018-03-19 22:23:52: Paul Buckley is checking in
+2018-03-19 22:23:54: Cathryn Mcgowan has joined the queue
+2018-03-19 22:23:54: Molina Melendez has checked in
+2018-03-19 22:23:54: Elsa Brock is checking in
+2018-03-19 22:23:55: Paul Buckley has checked in
+2018-03-19 22:23:55: Mccormick Waller is checking in
+2018-03-19 22:23:55: Mercer Thompson has joined the queue
+2018-03-19 22:23:57: Robles Vance has joined the queue
+2018-03-19 22:23:57: Elsa Brock has checked in
+2018-03-19 22:23:57: Janice Griffith is checking in
+2018-03-19 22:23:59: Bob Bobson has joined the queue
+2018-03-19 22:23:59: Mccormick Waller has checked in
+2018-03-19 22:23:59: Katherine Reid is checking in
+2018-03-19 22:24:01: Hancock Hale has joined the queue
+2018-03-19 22:24:02: Janice Griffith has checked in
+2018-03-19 22:24:02: Melisa Avila is checking in
+2018-03-19 22:24:02: Katherine Reid has checked in
+2018-03-19 22:24:02: Deanna Manning is checking in
+2018-03-19 22:24:02: Lott Robertson has joined the queue
+2018-03-19 22:24:04: Vance Watts has joined the queue
+2018-03-19 22:24:05: Melisa Avila has checked in
+2018-03-19 22:24:05: Tammi Meyers is checking in
+2018-03-19 22:24:06: Goldie Mejia has joined the queue
+2018-03-19 22:24:06: Deanna Manning has checked in
+2018-03-19 22:24:06: Klein Curtis is checking in
+2018-03-19 22:24:08: Klein Curtis has checked in
+2018-03-19 22:24:08: Carla Sharpe is checking in
+2018-03-19 22:24:09: Elsa Finley has joined the queue
+2018-03-19 22:24:09: Kelly Prince has joined the queue
+2018-03-19 22:24:09: Tammi Meyers has checked in
+2018-03-19 22:24:09: Checkin desk 0 has closed
+2018-03-19 22:24:11: Rita Payne has joined the queue
+2018-03-19 22:24:12: Henson Garner has joined the queue
+2018-03-19 22:24:13: Carla Sharpe has checked in
+2018-03-19 22:24:13: Checkin desk 1 has closed
