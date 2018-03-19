@@ -132,6 +132,8 @@ public class Flight extends Observable {
      */
     public void addOnePassenger() {
     	nbPassengerRegistered++;
+    	setChanged();
+    	notifyObservers(this);
     }
 
     /**

@@ -1,76 +1,14 @@
 Logs of the previous simulation:
-2018-03-10 20:03:37: Robles Vance is checking in
-2018-03-10 20:03:38: Cathryn Mcgowan has joined the queue
-2018-03-10 20:03:40: Rita Payne has joined the queue
-2018-03-10 20:03:40: Henson Garner is checking in
-2018-03-10 20:03:40: Peterson Woodard is checking in
-2018-03-10 20:03:41: Vance Watts has joined the queue
-2018-03-10 20:03:43: Bob Bobson is checking in
-2018-03-10 20:03:43: Grimes Morrow is checking in
-2018-03-10 20:03:44: Griffith Valentine has joined the queue
-2018-03-10 20:03:46: Carissa Taylor has joined the queue
-2018-03-10 20:03:47: Tammi Meyers is checking in
-2018-03-10 20:03:48: Sarah Perez is checking in
-2018-03-10 20:03:49: Katherine Reid has joined the queue
-2018-03-10 20:03:50: Paul Buckley is checking in
-2018-03-10 20:03:50: Frazier Sears has joined the queue
-2018-03-10 20:03:50: Hancock Hale is checking in
-2018-03-10 20:03:53: Pugh Santiago has joined the queue
-2018-03-10 20:03:53: Chang Brown has joined the queue
-2018-03-10 20:03:53: Kelly Prince is checking in
-2018-03-10 20:03:53: Cathryn Mcgowan is checking in
-2018-03-10 20:03:55: Pratt Sheppard has joined the queue
-2018-03-10 20:03:57: Carlson Jenkins has joined the queue
-2018-03-10 20:03:57: Rita Payne is checking in
-2018-03-10 20:03:58: Vance Watts is checking in
-2018-03-10 20:03:59: Sullivan Owen has joined the queue
-2018-03-10 20:03:59: Britney Roach has joined the queue
-2018-03-10 20:04:02: Griffith Valentine is checking in
-2018-03-10 20:04:02: Leola Vazquez has joined the queue
-2018-03-10 20:04:03: Carissa Taylor is checking in
-2018-03-10 20:04:04: Melinda Hess has joined the queue
-2018-03-10 20:04:05: Jeannette Hendrix has joined the queue
-2018-03-10 20:04:07: Desiree Peters has joined the queue
-2018-03-10 20:04:07: Katherine Reid is checking in
-2018-03-10 20:04:07: Goldie Mejia has joined the queue
-2018-03-10 20:04:07: Frazier Sears is checking in
-2018-03-10 20:04:09: Alexandra Fuentes has joined the queue
-2018-03-10 20:04:11: Jim Johnson has joined the queue
-2018-03-10 20:04:11: Pugh Santiago is checking in
-2018-03-10 20:04:12: Chang Brown is checking in
-2018-03-10 20:04:13: Trevino Cannon has joined the queue
-2018-03-10 20:04:14: Pratt Sheppard is checking in
-2018-03-10 20:04:14: Reba Hickman has joined the queue
-2018-03-10 20:04:15: Augusta Hubbard has joined the queue
-2018-03-10 20:04:16: Carlson Jenkins is checking in
-2018-03-10 20:04:16: Shawna Morse has joined the queue
-2018-03-10 20:04:18: Sullivan Owen is checking in
-2018-03-10 20:04:18: Richards Bird has joined the queue
-2018-03-10 20:04:20: Britney Roach is checking in
-2018-03-10 20:04:20: Mccormick Waller has joined the queue
-2018-03-10 20:04:20: Leola Vazquez is checking in
-2018-03-10 20:04:22: Melinda Hess is checking in
-2018-03-10 20:04:23: Lorena Sanchez has joined the queue
-2018-03-10 20:04:24: Jeannette Hendrix is checking in
-2018-03-10 20:04:25: Desiree Peters is checking in
-2018-03-10 20:04:25: Dean Orr has joined the queue
-2018-03-10 20:04:26: Mandy Ramsey has joined the queue
-2018-03-10 20:04:27: Marquez Rodriquez has joined the queue
-2018-03-10 20:04:28: Goldie Mejia is checking in
-2018-03-10 20:04:28: Alexandra Fuentes is checking in
-2018-03-10 20:04:29: Carla Sharpe has joined the queue
-2018-03-10 20:04:30: Jim Johnson is checking in
-2018-03-10 20:04:30: Melisa Avila has joined the queue
-2018-03-10 20:04:31: Trevino Cannon is checking in
-2018-03-10 20:04:32: Lott Robertson has joined the queue
-2018-03-10 20:04:33: Elsa Brock has joined the queue
-2018-03-10 20:04:34: Slater Welch has joined the queue
-2018-03-10 20:04:34: Reba Hickman is checking in
-2018-03-10 20:04:35: Augusta Hubbard is checking in
-2018-03-10 20:04:36: Ebony Bartlett has joined the queue
-2018-03-10 20:04:37: Shawna Morse is checking in
-2018-03-10 20:04:37: Klein Curtis has joined the queue
-2018-03-10 20:04:39: Janice Griffith has joined the queue
-2018-03-10 20:04:40: Checkin desk 0 has closed
-2018-03-10 20:04:40: Molina Melendez has joined the queue
-2018-03-10 20:04:41: Checkin desk 1 has closed
+2018-03-19 22:33:39: Reba Hickman has joined the queue
+2018-03-19 22:33:41: Robles Vance has joined the queue
+2018-03-19 22:33:42: Katherine Reid has checked in
+2018-03-19 22:33:42: Marquez Rodriquez is checking in
+2018-03-19 22:33:43: Sims David has joined the queue
+2018-03-19 22:33:43: Janice Griffith has checked in
+2018-03-19 22:33:43: Carissa Taylor is checking in
+2018-03-19 22:33:45: Pearl Brewer has joined the queue
+2018-03-19 22:33:45: Carissa Taylor has checked in
+2018-03-19 22:33:45: Checkin desk 1 has closed
+2018-03-19 22:33:47: Hancock Hale has joined the queue
+2018-03-19 22:33:47: Marquez Rodriquez has checked in
+2018-03-19 22:33:47: Checkin desk 0 has closed

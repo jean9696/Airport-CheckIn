@@ -23,6 +23,7 @@ public class CheckInDesk extends Observable {
 
     public void setCurrentPassenger(Passenger currentPassenger) {
         this.currentPassenger = currentPassenger;
+        setChanged();
         notifyObservers(currentPassenger);
     }
 
