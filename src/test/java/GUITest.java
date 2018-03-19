@@ -28,7 +28,7 @@ public class GUITest {
         assertEquals(GUI.getBaggageVolumeInput(),  null);
         assertEquals(GUI.getBaggageWeightInput(),  null);
         assertEquals(GUI.getLastNameInput(),  "");
-        assertEquals(GUI.getfirstnameInput(),  "");
+        assertEquals(GUI.getFirstnameInput(),  "");
         assertEquals(GUI.getBookingReferenceInput(),  "");
     }
 
