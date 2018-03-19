@@ -8,6 +8,7 @@ import model.collection.PassengerQueue;
 import model.entity.CheckInDesk;
 import model.entity.Flight;
 
+import java.util.LinkedList;
 
 public class CheckIn {
 
@@ -29,12 +30,13 @@ public class CheckIn {
         queueController.simulatePassengerArrival(passengers); // async
 
         //Desk(s)
-       for (int i=0;i<2;i++) {
+        LinkedList<CheckInDesk> deskList = new LinkedList<>();
+        for (int i=0;i<2;i++) {
             CheckInDesk checkInDesk = new CheckInDesk(i);
             CheckInDeskController checkInDeskController = new CheckInDeskController(checkInDesk);
             checkInDeskController.simulateCheckIn(passengerQueue, 60); //async
-       }
-
+            deskList.add(checkInDesk);
+        }
 
         //Flight(s)
         for (Flight flight : FlightList.getInstance().values()) {
@@ -42,9 +44,6 @@ public class CheckIn {
         }
 
         //run GUI with obervables
-
+        final view.GUI GUI = new view.GUI(passengerQueue, deskList, FlightList.getInstance());
     }
-
-
-
 }

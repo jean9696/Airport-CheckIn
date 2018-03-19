@@ -1,28 +1,37 @@
 package view;
 
+import model.collection.PassengerQueue;
+import model.entity.CheckInDesk;
+import model.entity.Passenger;
+import model.entity.Flight;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
  * view.GUI of the app
  */
 public class GUI extends JFrame {
 
-	private JTextField lastNameInput, surnameInput, bookingReferenceInput, baggageVolumeInput, baggageWeightInput;
-	private JButton addButton;
+	private Queue queue;
+
+    private JTextField lastNameInput, surnameInput, bookingReferenceInput, baggageVolumeInput, baggageWeightInput;
+    private JButton addButton;
 	private JTextArea messageArea;
 
-	public GUI () {
+	public GUI (PassengerQueue queueModel, LinkedList<CheckInDesk> desks, HashMap<String, Flight> flightList) {
 
 		// set up the title of the window
 		this.setTitle("model.entity.Booking view.GUI");
 
 		// call the two functions that set up the view.GUI
-		setupNorthPanel();
-		setupCenterPanel();
-		setupSouthPanel();
+		setupNorthPanel(queueModel);
+		setupCenterPanel(desks);
+		setupSouthPanel(flightList);
 
 		//setDefaultCloseOperation(this.DO_NOTHING_ON_CLOSE);
 
@@ -36,7 +45,7 @@ public class GUI extends JFrame {
 	/**
 	 * Set up the 5 input fields
 	 */
-	private void setupNorthPanel() {
+	/*private void setupNorthPanel() {
 
 		//Set up the 1st line for the surname
 		JPanel surnamePanel = new JPanel();
@@ -84,12 +93,32 @@ public class GUI extends JFrame {
 
 		this.add(northPanel, BorderLayout.NORTH);
 
-	}
+	}*/
+
+	private void setupNorthPanel(PassengerQueue queueModel){
+	    JPanel queuePanel = new JPanel();
+	    queuePanel.setLayout(new GridLayout(2, 1));
+	    Queue queue = new Queue(queueModel);
+	    queuePanel.add(queue.setupAmountInQueue());
+        queuePanel.add(queue.setupQueue(new LinkedList<Passenger>()));
+        this.add(queuePanel, BorderLayout.NORTH);
+    }
+
+    private void setupCenterPanel(LinkedList<CheckInDesk> checkInDesks) {
+        JPanel desksPanel = new JPanel();
+        desksPanel.setLayout(new GridLayout(1, checkInDesks.size()));
+		for (CheckInDesk deskModel : checkInDesks) {
+			Desk deskView = new Desk( "Desk", deskModel);
+			desksPanel.add(deskView.setupDesk());
+		}
+        this.add(desksPanel, BorderLayout.CENTER);
+    }
+
 
 	/**
 	 * Set up the center panel for the text area
 	 */
-	private void setupCenterPanel() {
+	/*private void setupCenterPanel() {
 		JPanel centerPanel = new JPanel();
 		centerPanel.setLayout(new GridLayout(1,1));
 		
@@ -99,12 +128,12 @@ public class GUI extends JFrame {
 		centerPanel.add(messageArea);
 		
 		this.add(centerPanel, BorderLayout.CENTER);
-	}
+	}*/
 	
 	/**
 	 * Set up the south panel for the button
 	 */
-	private void setupSouthPanel() {
+	/*private void setupSouthPanel() {
 
 		JPanel southPanel = new JPanel();
 		southPanel.setLayout(new GridLayout(1,1));
@@ -113,7 +142,17 @@ public class GUI extends JFrame {
 		southPanel.add(addButton);		
 
 		this.add(southPanel, BorderLayout.SOUTH);
-	}
+	}*/
+
+	private void setupSouthPanel(HashMap<String, Flight> flightList) {
+	    JPanel flightsPanel = new JPanel();
+	    flightsPanel.setLayout(new GridLayout(1, flightList.size()));
+		for (model.entity.Flight flight : flightList.values()) {
+			view.Flight flightView = new view.Flight(flight);
+			flightsPanel.add(flightView.setupFlightPanel(flight));
+		}
+	    this.add(flightsPanel, BorderLayout.SOUTH);
+    }
 
 	/**
 	 * @return lastname input as string
