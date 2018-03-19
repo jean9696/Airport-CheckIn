@@ -4,36 +4,36 @@ package model.entity;
  * Represents a passenger
  */
 public class PassengerInformation {
-    protected String surname;
+    protected String firstname;
     protected String lastname;
     protected Integer age;
 
     /**
-     * @param surname
+     * @param firstname
      * @param lastname
      * @param age
      */
-    public PassengerInformation(String surname, String lastname, Integer age) throws Exception {
-        if (surname.length() < 2 || lastname.length() < 2 || age < 1) {
+    public PassengerInformation(String firstname, String lastname, Integer age) throws Exception {
+        if (firstname.length() < 2 || lastname.length() < 2 || age < 1) {
             throw new Exception("Invalid passenger constructor inputs");
         }
-        this.surname = surname;
+        this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
     }
 
     /**
-     * @return surname
+     * @return firstname
      */
-    public String getSurname() {
-        return surname;
+    public String getFirstname() {
+        return firstname;
     }
 
     /**
-     * @param passenger's surname
+     * @param passenger's firstname
      */
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     /**
@@ -69,6 +69,6 @@ public class PassengerInformation {
      */
     @Override
     public String toString() {
-        return surname + " " + lastname;
+        return firstname + " " + lastname;
     }
 }

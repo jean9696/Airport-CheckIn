@@ -30,11 +30,9 @@ public class CheckInDesk extends Observable {
         this.open = false;
     }
 
-    public Boolean getOpen() {
+    public Boolean isOpen() {
         return open;
     }
 
-    public void setOpen(Boolean open) {
-        this.open = open;
-    }
+    public void open() { this.open = true; }
 }

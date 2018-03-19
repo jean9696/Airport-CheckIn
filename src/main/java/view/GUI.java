@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
  */
 public class GUI extends JFrame {
 
-	private JTextField lastNameInput, surnameInput, bookingReferenceInput, baggageVolumeInput, baggageWeightInput;
+	private JTextField lastNameInput, firstnameInput, bookingReferenceInput, baggageVolumeInput, baggageWeightInput;
 	private JButton addButton;
 	private JTextArea messageArea;
 
@@ -38,12 +38,12 @@ public class GUI extends JFrame {
 	 */
 	private void setupNorthPanel() {
 
-		//Set up the 1st line for the surname
-		JPanel surnamePanel = new JPanel();
-		surnamePanel.setLayout(new GridLayout(1,2));
-		surnamePanel.add(new JLabel("Surname"));
-		surnameInput = new JTextField(15);
-		surnamePanel.add(surnameInput);
+		//Set up the 1st line for the firstname
+		JPanel firstnamePanel = new JPanel();
+		firstnamePanel.setLayout(new GridLayout(1,2));
+		firstnamePanel.add(new JLabel("firstname"));
+		firstnameInput = new JTextField(15);
+		firstnamePanel.add(firstnameInput);
 
 		//Set up the 2nd line for the last name
 		JPanel lastNamePanel = new JPanel();
@@ -76,7 +76,7 @@ public class GUI extends JFrame {
 		//Set up the whole north panel
 		JPanel northPanel = new JPanel();
 		northPanel.setLayout(new GridLayout(5,1));
-		northPanel.add(surnamePanel);
+		northPanel.add(firstnamePanel);
 		northPanel.add(lastNamePanel);
 		northPanel.add(bookingRefPanel);
 		northPanel.add(volumePanel);
@@ -123,10 +123,10 @@ public class GUI extends JFrame {
     }
 
 	/**
-	 * @return surname input as string
+	 * @return firstname input as string
 	 */
-    public String getSurnameInput() {
-        return surnameInput.getText();
+    public String getFirstnameInput() {
+        return firstnameInput.getText();
     }
 
 	/**
@@ -175,7 +175,7 @@ public class GUI extends JFrame {
     public void clear() {
 	    messageArea.setText("");
         lastNameInput.setText("");
-        surnameInput.setText("");
+        firstnameInput.setText("");
         bookingReferenceInput.setText("");
         baggageVolumeInput.setText("");
         baggageWeightInput.setText("");

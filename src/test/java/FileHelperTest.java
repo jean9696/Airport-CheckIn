@@ -91,8 +91,8 @@ public class FileHelperTest {
                 BookingList.getInstance().get("123").getPassenger().getLastname()
         );
         assertEquals("Error in readBookings: PassengerInformation First Name",
-                testBooking.getPassenger().getSurname(),
-                BookingList.getInstance().get("123").getPassenger().getSurname()
+                testBooking.getPassenger().getFirstname(),
+                BookingList.getInstance().get("123").getPassenger().getFirstname()
         );
         assertEquals("Error in readBookings: PassengerInformation Age",
                 testBooking.getPassenger().getAge(),
@@ -125,8 +125,8 @@ public class FileHelperTest {
                 BookingList.getInstance().get("456").getPassenger().getLastname()
         );
         assertNotEquals("Error in readBookings: PassengerInformation First Name",
-                testBooking.getPassenger().getSurname(),
-                BookingList.getInstance().get("456").getPassenger().getSurname()
+                testBooking.getPassenger().getFirstname(),
+                BookingList.getInstance().get("456").getPassenger().getFirstname()
         );
         assertNotEquals("Error in readBookings: PassengerInformation Age",
                 testBooking.getPassenger().getAge(),

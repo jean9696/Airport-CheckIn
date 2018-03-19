@@ -9,7 +9,7 @@ public class Passenger extends PassengerInformation {
 
 
     public Passenger(PassengerInformation passenger, Integer bookingId, BaggageSize baggage) throws Exception {
-        super(passenger.surname, passenger.lastname, passenger.age);
+        super(passenger.firstname, passenger.lastname, passenger.age);
         if (!baggage.isValidSize() || bookingId < 1) {
             throw new Exception("Invalid queuing passenger constructor inputs");
         }
@@ -18,7 +18,7 @@ public class Passenger extends PassengerInformation {
     }
 
     public Passenger(PassengerInformation passenger, Integer bookingId) throws Exception {
-        super(passenger.surname, passenger.lastname, passenger.age);
+        super(passenger.firstname, passenger.lastname, passenger.age);
         if (bookingId < 1) {
             throw new Exception("Invalid queuing passenger constructor inputs");
         }

@@ -99,11 +99,11 @@ public class Booking {
     }
 
     /**
-     * @param surname
+     * @param firstname
      * @param lastname
      * @return Boolean: True if the passenger details correspond to the booking, else False
      */
-    public Boolean canPassengerAccess(String surname, String lastname) {
-        return surname.toLowerCase().equals(passenger.getSurname().toLowerCase()) && lastname.toLowerCase().equals(passenger.getLastname().toLowerCase());
+    public Boolean canPassengerAccess(String firstname, String lastname) {
+        return firstname.toLowerCase().equals(passenger.getFirstname().toLowerCase()) && lastname.toLowerCase().equals(passenger.getLastname().toLowerCase());
     }
 }
