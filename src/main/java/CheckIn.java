@@ -8,6 +8,7 @@ import model.collection.PassengerQueue;
 import model.entity.CheckInDesk;
 import model.entity.Flight;
 
+
 import java.util.LinkedList;
 
 public class CheckIn {
