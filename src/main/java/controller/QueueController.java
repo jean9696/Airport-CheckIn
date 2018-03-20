@@ -5,7 +5,6 @@ import model.collection.PassengerQueue;
 import model.entity.Log;
 import model.entity.Passenger;
 
-import java.util.Date;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -23,7 +22,7 @@ public class QueueController {
 
     private void addPassengerToQueue(Passenger passenger) {
         passengerQueue.add(passenger);
-        Log.getInstance().addToLog(passenger.getSurname() + " " + passenger.getLastname() + " has joined the queue");
+        Log.getInstance().addToLog(passenger.getFirstname() + " " + passenger.getLastname() + " has joined the queue");
         try {
             // new passenger arrives at random time between 1/2sec and 3sec
             Thread.sleep(ThreadLocalRandom.current().nextInt(500, 3000));

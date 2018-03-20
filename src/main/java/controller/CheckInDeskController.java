@@ -26,7 +26,7 @@ public class CheckInDeskController {
             try {
 
                 // checkIn process last a random time between 2sec and 5sec
-                Log.getInstance().addToLog(checkInDesk.getCurrentPassenger().getSurname() + " " + checkInDesk.getCurrentPassenger().getLastname() + " is checking in");
+                Log.getInstance().addToLog(checkInDesk.getCurrentPassenger().getFirstname() + " " + checkInDesk.getCurrentPassenger().getLastname() + " is checking in");
                 Thread.sleep(ThreadLocalRandom.current().nextInt(2000, 5000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -38,9 +38,9 @@ public class CheckInDeskController {
             if (passengerBooking == null) {
                 throw new Exception("Unable to get the booking #" + bookingId);
             }
-            if (passengerBooking.canPassengerAccess(currentPassenger.getSurname(), currentPassenger.getLastname())) {
+            if (passengerBooking.canPassengerAccess(currentPassenger.getFirstname(), currentPassenger.getLastname())) {
                 passengerBooking.setCheckedIn(true);
-                Log.getInstance().addToLog(currentPassenger.getSurname() + " " + currentPassenger.getLastname() + " has checked in");
+                Log.getInstance().addToLog(currentPassenger.getFirstname() + " " + currentPassenger.getLastname() + " has checked in");
                 Flight passengerFlight = passengerBooking.getFlight();
                 passengerFlight.addOnePassenger();
                 passengerFlight.addBaggageRegistered(passengerBooking.getBaggageSize());

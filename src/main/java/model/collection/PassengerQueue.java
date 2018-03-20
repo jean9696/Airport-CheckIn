@@ -45,14 +45,18 @@ public class PassengerQueue extends Observable implements Queue<Passenger> {
 
     @Override
     public boolean add(Passenger passenger) {
-        notifyObservers(passenger);
-        return passengers.add(passenger);
+        boolean reply = passengers.add(passenger);
+        setChanged();
+        notifyObservers(passengers);
+        return reply;
     }
 
     @Override
     public boolean remove(Object o) {
-        notifyObservers(o);
-        return passengers.remove(o);
+        boolean reply = passengers.remove(o);
+        setChanged();
+        notifyObservers(passengers);
+        return reply;
     }
 
     @Override
@@ -62,19 +66,19 @@ public class PassengerQueue extends Observable implements Queue<Passenger> {
 
     @Override
     public boolean addAll(Collection<? extends Passenger> c) {
-        notifyObservers(c);
+        //notifyObservers(c);
         return passengers.addAll(c);
     }
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        notifyObservers(c);
+        //notifyObservers(c);
         return passengers.removeAll(c);
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        notifyObservers(c);
+        //notifyObservers(c);
         return passengers.retainAll(c);
     }
 
@@ -85,13 +89,13 @@ public class PassengerQueue extends Observable implements Queue<Passenger> {
 
     @Override
     public boolean offer(Passenger passenger) {
-        notifyObservers(passenger);
+        //notifyObservers(passenger);
         return passengers.offer(passenger);
     }
 
     @Override
     public Passenger remove() {
-        notifyObservers();
+        //notifyObservers();
         return passengers.remove();
     }
 
