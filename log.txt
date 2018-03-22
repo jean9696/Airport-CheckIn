@@ -1,14 +1,123 @@
 Logs of the previous simulation:
-2018-03-19 22:33:39: Reba Hickman has joined the queue
-2018-03-19 22:33:41: Robles Vance has joined the queue
-2018-03-19 22:33:42: Katherine Reid has checked in
-2018-03-19 22:33:42: Marquez Rodriquez is checking in
-2018-03-19 22:33:43: Sims David has joined the queue
-2018-03-19 22:33:43: Janice Griffith has checked in
-2018-03-19 22:33:43: Carissa Taylor is checking in
-2018-03-19 22:33:45: Pearl Brewer has joined the queue
-2018-03-19 22:33:45: Carissa Taylor has checked in
-2018-03-19 22:33:45: Checkin desk 1 has closed
-2018-03-19 22:33:47: Hancock Hale has joined the queue
-2018-03-19 22:33:47: Marquez Rodriquez has checked in
-2018-03-19 22:33:47: Checkin desk 0 has closed
+2018-03-22 21:00:38: Chang Brown is checking in
+2018-03-22 21:00:38: Noelle Norris is checking in
+2018-03-22 21:00:38: Mercer Thompson is checking in
+2018-03-22 21:00:38: Johnson Mathews is checking in
+2018-03-22 21:00:38: Cathryn Mcgowan is checking in
+2018-03-22 21:00:38: Carla Sharpe is checking in
+2018-03-22 21:00:38: Robles Vance is checking in
+2018-03-22 21:00:39: Alexandra Fuentes has joined the queue
+2018-03-22 21:00:39: Alexandra Fuentes is checking in
+2018-03-22 21:00:42: Leola Vazquez has joined the queue
+2018-03-22 21:00:44: Britney Roach has checked in
+2018-03-22 21:00:44: Johnson Mathews has checked in
+2018-03-22 21:00:44: Carla Sharpe has checked in
+2018-03-22 21:00:44: Trevino Cannon has checked in
+2018-03-22 21:00:45: Noelle Norris has checked in
+2018-03-22 21:00:45: Deanna Manning has checked in
+2018-03-22 21:00:45: Robles Vance has checked in
+2018-03-22 21:00:45: Mercer Thompson has checked in
+2018-03-22 21:00:45: Chang Brown has checked in
+2018-03-22 21:00:46: Jim Johnson is checking in
+2018-03-22 21:00:48: Leola Vazquez has checked in
+2018-03-22 21:00:49: Jim Johnson has checked in
+2018-03-22 21:00:50: Goldie Mejia is checking in
+2018-03-22 21:00:52: Goldie Mejia has checked in
+2018-03-22 21:00:53: Tammi Meyers is checking in
+2018-03-22 21:00:55: Goldie Mejia has checked in
+2018-03-22 21:00:55: Sarah Perez is checking in
+2018-03-22 21:00:56: Ebony Bartlett has joined the queue
+2018-03-22 21:00:56: Ebony Bartlett is checking in
+2018-03-22 21:00:58: Peterson Woodard has joined the queue
+2018-03-22 21:00:58: Peterson Woodard is checking in
+2018-03-22 21:00:58: Tammi Meyers has checked in
+2018-03-22 21:00:59: Ebony Bartlett has checked in
+2018-03-22 21:01:00: Sarah Perez has checked in
+2018-03-22 21:01:00: Ebony Bartlett has checked in
+2018-03-22 21:01:01: Weber Duffy is checking in
+2018-03-22 21:01:03: Peterson Woodard has checked in
+2018-03-22 21:01:03: Paul Buckley has joined the queue
+2018-03-22 21:01:04: Weber Duffy has checked in
+2018-03-22 21:01:04: Jeannette Hendrix has joined the queue
+2018-03-22 21:01:04: Jeannette Hendrix is checking in
+2018-03-22 21:01:07: Paul Buckley has checked in
+2018-03-22 21:01:07: Paul Buckley has checked in
+2018-03-22 21:01:07: Lott Robertson is checking in
+2018-03-22 21:01:07: Jeannette Hendrix has checked in
+2018-03-22 21:01:09: Elsa Brock has joined the queue
+2018-03-22 21:01:11: Lott Robertson has checked in
+2018-03-22 21:01:12: Carlson Jenkins has joined the queue
+2018-03-22 21:01:12: Elsa Brock has checked in
+2018-03-22 21:01:15: Hancock Hale is checking in
+2018-03-22 21:01:17: Hannah Lee is checking in
+2018-03-22 21:01:17: Carlson Jenkins has checked in
+2018-03-22 21:01:19: Hancock Hale has checked in
+2018-03-22 21:01:19: Hannah Lee has checked in
+2018-03-22 21:01:20: Molina Melendez is checking in
+2018-03-22 21:01:20: Hancock Hale has checked in
+2018-03-22 21:01:21: Hannah Lee has checked in
+2018-03-22 21:01:22: Vance Watts has joined the queue
+2018-03-22 21:01:23: Molina Melendez has checked in
+2018-03-22 21:01:25: Marquez Rodriquez has joined the queue
+2018-03-22 21:01:27: Sullivan Owen has joined the queue
+2018-03-22 21:01:27: Vance Watts has checked in
+2018-03-22 21:01:28: Frazier Sears has joined the queue
+2018-03-22 21:01:28: Frazier Sears is checking in
+2018-03-22 21:01:30: Marquez Rodriquez has checked in
+2018-03-22 21:01:31: Sullivan Owen has checked in
+2018-03-22 21:01:31: Elsa Finley is checking in
+2018-03-22 21:01:33: White Estes has joined the queue
+2018-03-22 21:01:33: Frazier Sears has checked in
+2018-03-22 21:01:34: Elsa Finley has checked in
+2018-03-22 21:01:37: White Estes has checked in
+2018-03-22 21:01:37: Lorena Sanchez has joined the queue
+2018-03-22 21:01:38: Checkin desk 4 has closed
+2018-03-22 21:01:38: Checkin desk 47 has closed
+2018-03-22 21:01:38: Checkin desk 45 has closed
+2018-03-22 21:01:38: Checkin desk 58 has closed
+2018-03-22 21:01:38: Checkin desk 2 has closed
+2018-03-22 21:01:38: Checkin desk 50 has closed
+2018-03-22 21:01:38: Checkin desk 57 has closed
+2018-03-22 21:01:38: Checkin desk 49 has closed
+2018-03-22 21:01:38: Checkin desk 46 has closed
+2018-03-22 21:01:38: Checkin desk 48 has closed
+2018-03-22 21:01:38: Checkin desk 59 has closed
+2018-03-22 21:01:38: Checkin desk 3 has closed
+2018-03-22 21:01:38: Checkin desk 0 has closed
+2018-03-22 21:01:38: Checkin desk 44 has closed
+2018-03-22 21:01:38: Checkin desk 52 has closed
+2018-03-22 21:01:38: Checkin desk 54 has closed
+2018-03-22 21:01:38: Checkin desk 39 has closed
+2018-03-22 21:01:38: Checkin desk 53 has closed
+2018-03-22 21:01:38: Checkin desk 1 has closed
+2018-03-22 21:01:38: Checkin desk 32 has closed
+2018-03-22 21:01:38: Checkin desk 12 has closed
+2018-03-22 21:01:38: Checkin desk 36 has closed
+2018-03-22 21:01:38: Checkin desk 55 has closed
+2018-03-22 21:01:38: Checkin desk 29 has closed
+2018-03-22 21:01:38: Checkin desk 42 has closed
+2018-03-22 21:01:38: Checkin desk 56 has closed
+2018-03-22 21:01:38: Checkin desk 51 has closed
+2018-03-22 21:01:38: Checkin desk 33 has closed
+2018-03-22 21:01:39: Checkin desk 37 has closed
+2018-03-22 21:01:39: Checkin desk 41 has closed
+2018-03-22 21:01:39: Checkin desk 19 has closed
+2018-03-22 21:01:39: Checkin desk 38 has closed
+2018-03-22 21:01:39: Checkin desk 26 has closed
+2018-03-22 21:01:39: Checkin desk 14 has closed
+2018-03-22 21:01:39: Checkin desk 22 has closed
+2018-03-22 21:01:39: Checkin desk 23 has closed
+2018-03-22 21:01:39: Checkin desk 20 has closed
+2018-03-22 21:01:39: Checkin desk 21 has closed
+2018-03-22 21:01:39: Checkin desk 28 has closed
+2018-03-22 21:01:39: Checkin desk 11 has closed
+2018-03-22 21:01:39: Checkin desk 15 has closed
+2018-03-22 21:01:39: Checkin desk 43 has closed
+2018-03-22 21:01:39: Checkin desk 13 has closed
+2018-03-22 21:01:39: Checkin desk 24 has closed
+2018-03-22 21:01:39: Checkin desk 8 has closed
+2018-03-22 21:01:39: Checkin desk 25 has closed
+2018-03-22 21:01:39: Checkin desk 6 has closed
+2018-03-22 21:01:39: Checkin desk 10 has closed
+2018-03-22 21:01:39: Checkin desk 9 has closed
+2018-03-22 21:01:39: Checkin desk 30 has closed

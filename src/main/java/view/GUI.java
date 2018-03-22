@@ -19,7 +19,7 @@ public class GUI extends JFrame {
 	public GUI (PassengerQueue queueModel, LinkedList<CheckInDesk> desks, HashMap<String, Flight> flightList) {
 
 		// set up the title of the window
-		this.setTitle("model.entity.Booking view.GUI");
+		this.setTitle("Airport");
 
 		// call the two functions that set up the view.GUI
 		setupNorthPanel(queueModel);
