@@ -1,5 +1,7 @@
 package controller;
 
+import exception.InvalidInputException;
+
 public class SettingsController {
 
     private Integer initialQueueLength;
@@ -17,9 +19,9 @@ public class SettingsController {
         return initialQueueLength;
     }
 
-    public void setInitialQueueLength(Integer initialQueueLength) throws Exception {
+    public void setInitialQueueLength(Integer initialQueueLength) throws InvalidInputException {
         if (initialQueueLength < 0 || initialQueueLength > 20) {
-            throw new Exception("Invalid queue length");
+            throw new InvalidInputException("queue length");
         }
         this.initialQueueLength = initialQueueLength;
     }
@@ -28,9 +30,9 @@ public class SettingsController {
         return checkInDeskNumber;
     }
 
-    public void setCheckInDeskNumber(Integer checkInDeskNumber) throws Exception {
+    public void setCheckInDeskNumber(Integer checkInDeskNumber) throws InvalidInputException {
         if (checkInDeskNumber < 0 || checkInDeskNumber > 5) {
-            throw new Exception("Invalid checkIn desk number");
+            throw new InvalidInputException("checkIn desk number");
         }
         this.checkInDeskNumber = checkInDeskNumber;
     }
@@ -39,9 +41,9 @@ public class SettingsController {
         return openTime;
     }
 
-    public void setOpenTime(Integer openTime) throws Exception {
+    public void setOpenTime(Integer openTime) throws InvalidInputException {
         if (openTime < 0 || openTime > 600) {
-            throw new Exception("Invalid open time");
+            throw new InvalidInputException("open time");
         }
         this.openTime = openTime;
     }
