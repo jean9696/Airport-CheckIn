@@ -72,6 +72,7 @@ public class GUI extends JFrame {
 	private void setupSouthPanel(HashMap<String, Flight> flightList) {
 	    JPanel flightsPanel = new JPanel();
 	    flightsPanel.setLayout(new GridLayout(1, flightList.size()));
+		flightsPanel.setPreferredSize(new Dimension(getWidth(), 100));
 		for (model.entity.Flight flight : flightList.values()) {
 			view.Flight flightView = new view.Flight(flight);
 			flightsPanel.add(flightView.setupFlightPanel());
