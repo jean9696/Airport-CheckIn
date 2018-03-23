@@ -123,7 +123,8 @@ public class Flight extends Observable {
      */
     public void addBaggageRegistered(BaggageSize baggageRegistered) {
         this.baggageRegistered.addBaggage(baggageRegistered);
-        notifyObservers(this.baggageRegistered);
+        setChanged();
+        notifyObservers();
     }
 
     /**
@@ -133,7 +134,7 @@ public class Flight extends Observable {
     public void addOnePassenger() {
     	nbPassengerRegistered++;
     	setChanged();
-    	notifyObservers(this);
+    	notifyObservers();
     }
 
     /**

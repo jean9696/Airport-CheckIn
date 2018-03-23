@@ -1,5 +1,6 @@
 package view;
 
+import model.collection.PassengerQueue;
 import model.entity.Passenger;
 
 import javax.swing.*;
@@ -10,6 +11,12 @@ import java.util.Observer;
 
 public class Queue extends JPanel implements Observer {
 
+    private JLabel queueText = new JLabel();
+    private JPanel queuePanel = new JPanel();
+    private JTextArea passengerArea = new JTextArea();
+    private JScrollPane scrollPane = new JScrollPane(passengerArea);
+    private PassengerQueue queue;
+
     public Queue (Observable observable) {
         observable.addObserver(this);
         passengerArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
@@ -18,20 +25,14 @@ public class Queue extends JPanel implements Observer {
         scrollPane.setPreferredSize(new Dimension(250, 250));
         queuePanel.setLayout(new GridLayout(1, 1));
         queuePanel.add(scrollPane);
+        queue = (PassengerQueue) observable;
     }
-
-    private JLabel queueText = new JLabel();
-    private JPanel queuePanel = new JPanel();
-    private JTextArea passengerArea = new JTextArea();
-    private JScrollPane scrollPane = new JScrollPane(passengerArea);
-    private LinkedList<Passenger> passengers;
 
     @Override
     public void update(Observable o, Object arg) {
-        passengers = (LinkedList<Passenger>) arg;
-        if (passengers.size() > 0) {
-            queueText.setText("There are currently " + passengers.size() + " people in the queue");
-            setupQueue(passengers);
+        if (queue.size() > 0) {
+            queueText.setText("There are currently " + queue.size() + " people in the queue");
+            setupQueue(queue.getPassengers());
         } else {
             queueText.setText("There are currently " + 0 + " people in the queue");
             setupQueue(new LinkedList<Passenger>());

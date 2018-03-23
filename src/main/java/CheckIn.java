@@ -33,7 +33,7 @@ public class CheckIn {
         for (int i=0;i<2;i++) {
             CheckInDesk checkInDesk = new CheckInDesk(i);
             CheckInDeskController checkInDeskController = new CheckInDeskController(checkInDesk);
-            checkInDeskController.simulateCheckIn(passengerQueue, 5); //async
+            checkInDeskController.simulateCheckIn(passengerQueue, 60); //async
             deskList.add(checkInDesk);
         }
 

@@ -29,11 +29,17 @@ public class CheckInDesk extends Observable {
 
     public void close() {
         this.open = false;
+        setChanged();
+        notifyObservers(false);
     }
 
     public Boolean isOpen() {
         return open;
     }
 
-    public void open() { this.open = true; }
+    public void open() {
+        this.open = true;
+        setChanged();
+        notifyObservers(true);
+    }
 }

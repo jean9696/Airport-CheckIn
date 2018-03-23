@@ -4,6 +4,7 @@ import helpers.FileHelper;
 import model.collection.BookingList;
 import model.collection.PassengerQueue;
 import model.entity.*;
+import view.GUI;
 
 import javax.swing.*;
 import java.util.Date;
@@ -65,20 +66,39 @@ public class CheckInDeskController {
      */
     public void simulateCheckIn(final PassengerQueue passengerQueue, final long openTime) {
         new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(openTime * 1000);
+                    checkInDesk.close();
+                } catch (Exception e) {
+                    // Print a message if something went wrong during the check in
+                    JOptionPane.showMessageDialog(null, e);
+                    e.printStackTrace();
+                }
+            }
+            }).start();
+        new Thread(new Runnable() {
             public void run() {
                 long timer = new Date().getTime();
-                while (new Date().getTime() - timer < openTime * 1000) {
+                int i = 0;
+                while (true) {
+                    //System.out.println(checkInDesk.isOpen());
                     try {
-                        checkInPassenger(passengerQueue.poll());
+                        if (checkInDesk.isOpen()) {
+                            checkInPassenger(passengerQueue.poll());
+                        } else {
+                            Thread.sleep(1000);
+                        }
                     } catch (Exception e) {
                         // Print a message if something went wrong during the check in
                         JOptionPane.showMessageDialog(null, e);
                         e.printStackTrace();
                     }
                 }
-                checkInDesk.close();
+                /*checkInDesk.close();
                 Log.getInstance().addToLog("Checkin desk " + checkInDesk.getId() + " has closed");
-                closeCheckInDesk(timer);
+                closeCheckInDesk(timer);*/
             }
         }).start();
     }

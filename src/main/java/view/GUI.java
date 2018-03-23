@@ -6,6 +6,7 @@ import model.entity.Flight;
 import model.entity.Passenger;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.util.HashMap;
@@ -19,7 +20,8 @@ public class GUI extends JFrame {
 	public GUI (PassengerQueue queueModel, LinkedList<CheckInDesk> desks, HashMap<String, Flight> flightList) {
 
 		// set up the title of the window
-		this.setTitle("model.entity.Booking view.GUI");
+		setTitle("model.entity.Booking view.GUI");
+		setMinimumSize(new Dimension(1400, 100));
 
 		// call the two functions that set up the view.GUI
 		setupNorthPanel(queueModel);
@@ -36,10 +38,23 @@ public class GUI extends JFrame {
 
 	private void setupNorthPanel(PassengerQueue queueModel){
 	    JPanel queuePanel = new JPanel();
-	    queuePanel.setLayout(new GridLayout(2, 1));
-	    Queue queue = new Queue(queueModel);
-	    queuePanel.add(queue.setupAmountInQueue());
-        queuePanel.add(queue.setupQueue(new LinkedList<Passenger>()));
+	    GridBagLayout queueLayout = new GridBagLayout();
+	    //queuePanel.setLayout(new GridLayout(2, 1));
+	    queuePanel.setLayout(queueLayout);
+	    GridBagConstraints gbc = new GridBagConstraints();
+	    gbc.gridx = 0;
+	    gbc.gridy = 0;
+	    gbc.weightx = 1.0;
+	    gbc.weighty = 1.0;
+	    gbc.fill = GridBagConstraints.HORIZONTAL;
+	    gbc.anchor = GridBagConstraints.NORTH;
+	    gbc.gridwidth = GridBagConstraints.RELATIVE;
+	    gbc.gridheight = GridBagConstraints.RELATIVE;
+		Queue queue = new Queue(queueModel);
+	    queuePanel.add(queue.setupAmountInQueue(), gbc);
+	    gbc.gridy = 1;
+	    gbc.anchor = GridBagConstraints.SOUTH;
+        queuePanel.add(queue.setupQueue(new LinkedList<Passenger>()), gbc);
         this.add(queuePanel, BorderLayout.NORTH);
     }
 
@@ -59,7 +74,7 @@ public class GUI extends JFrame {
 	    flightsPanel.setLayout(new GridLayout(1, flightList.size()));
 		for (model.entity.Flight flight : flightList.values()) {
 			view.Flight flightView = new view.Flight(flight);
-			flightsPanel.add(flightView.setupFlightPanel(flight));
+			flightsPanel.add(flightView.setupFlightPanel());
 		}
 	    this.add(flightsPanel, BorderLayout.SOUTH);
     }

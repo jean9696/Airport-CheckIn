@@ -10,23 +10,25 @@ public class Flight extends JPanel implements Observer {
     private JLabel flightText = new JLabel();
     private JLabel passengersCheckedIn = new JLabel();
     private JLabel baggageCheckedIn = new JLabel();
+    private model.entity.Flight flight;
 
     public Flight(Observable observable) {
         observable.addObserver(this);
+        flight = (model.entity.Flight) observable;
     }
 
     @Override
     public void update(Observable o, Object arg) {
-        setPassengerText((model.entity.Flight) arg);
-        setBaggageText((model.entity.Flight) arg);
+        setPassengerText();
+        setBaggageText();
     }
 
-    public JPanel setupFlightPanel(model.entity.Flight flight) {
+    public JPanel setupFlightPanel() {
         JPanel flightPanel = new JPanel();
         flightPanel.setLayout(new GridLayout(3, 1));
         flightText.setText(flight.getFlightCode() + " " + flight.getDestinationAirport());
-        setPassengerText(flight);
-        setBaggageText(flight);
+        setPassengerText();
+        setBaggageText();
         flightPanel.add(flightText);
         flightPanel.add(passengersCheckedIn);
         flightPanel.add(baggageCheckedIn);
@@ -34,11 +36,11 @@ public class Flight extends JPanel implements Observer {
         return flightPanel;
     }
 
-    private void setPassengerText(model.entity.Flight flight) {
+    private void setPassengerText() {
         passengersCheckedIn.setText(flight.getNbPassengersRegistered() + " passengers checked in");
     }
 
-    private void setBaggageText(model.entity.Flight flight) {
+    private void setBaggageText() {
         baggageCheckedIn.setText(flight.getBaggageRegistered().getWeight() + "kg of baggage checked in");
     }
 }
