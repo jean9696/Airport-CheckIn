@@ -1,13 +1,10 @@
 package controller;
 
-import helpers.FileHelper;
 import model.collection.BookingList;
 import model.collection.PassengerQueue;
 import model.entity.*;
-import view.GUI;
 
 import javax.swing.*;
-import java.util.Date;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class CheckInDeskController {
@@ -53,24 +50,23 @@ public class CheckInDeskController {
 
     /**
      * Close the checkInDeskAssociated
-     * @param timer
      */
-    private void closeCheckInDesk(long timer) {
+    private void closeCheckInDesk() {
         this.checkInDesk.close();
-        FileHelper.writeToFile("log.txt", Log.getInstance().getLog());
     }
 
     /**
      * @param passengerQueue
      * @param openTime in seconds
      */
-    public void simulateCheckIn(final PassengerQueue passengerQueue, final long openTime) {
+    public void simulateCheckIn(final PassengerQueue passengerQueue, final long openTime, final Boolean[] isRunning) {
+        // close the desk after a given time
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     Thread.sleep(openTime * 1000);
-                    checkInDesk.close();
+                    closeCheckInDesk();
                 } catch (Exception e) {
                     // Print a message if something went wrong during the check in
                     JOptionPane.showMessageDialog(null, e);
@@ -80,15 +76,12 @@ public class CheckInDeskController {
             }).start();
         new Thread(new Runnable() {
             public void run() {
-                long timer = new Date().getTime();
-                int i = 0;
-                while (true) {
-                    //System.out.println(checkInDesk.isOpen());
+                while (isRunning[0]) {
                     try {
                         if (checkInDesk.isOpen()) {
                             checkInPassenger(passengerQueue.poll());
                         } else {
-                            Thread.sleep(1000);
+                            Thread.sleep(500);
                         }
                     } catch (Exception e) {
                         // Print a message if something went wrong during the check in
@@ -96,9 +89,8 @@ public class CheckInDeskController {
                         e.printStackTrace();
                     }
                 }
-                /*checkInDesk.close();
                 Log.getInstance().addToLog("Checkin desk " + checkInDesk.getId() + " has closed");
-                closeCheckInDesk(timer);*/
+                closeCheckInDesk();
             }
         }).start();
     }

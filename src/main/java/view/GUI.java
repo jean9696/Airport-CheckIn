@@ -6,7 +6,6 @@ import model.entity.Flight;
 import model.entity.Passenger;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.util.HashMap;
@@ -20,7 +19,8 @@ public class GUI extends JFrame {
 	public GUI (PassengerQueue queueModel, LinkedList<CheckInDesk> desks, HashMap<String, Flight> flightList) {
 
 		// set up the title of the window
-		setTitle("model.entity.Booking view.GUI");
+		setTitle("Airport");
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setMinimumSize(new Dimension(1400, 100));
 
 		// call the two functions that set up the view.GUI
