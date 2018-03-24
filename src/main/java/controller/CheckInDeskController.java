@@ -44,6 +44,7 @@ public class CheckInDeskController {
                 passengerFlight.addBaggageRegistered(passengerBooking.getBaggageSize());
                 Integer extraFees = currentPassenger.getBaggage().calculateOverCapacityPrice(passengerBooking.getBaggageSize());
                 passengerFlight.addExtraFees(extraFees);
+                checkInDesk.setCurrentPassenger(null);
             }
         }
     }
