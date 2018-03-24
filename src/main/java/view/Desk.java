@@ -1,5 +1,7 @@
 package view;
 
+import model.collection.BookingList;
+import model.entity.BaggageSize;
 import model.entity.Passenger;
 import model.entity.CheckInDesk;
 
@@ -60,9 +62,10 @@ public class Desk extends JPanel implements Observer {
     }
 
     private void updateDesk(Passenger person) {
+        BaggageSize bookingBaggageSize = BookingList.getInstance().get(person.getBookingId()).getBaggageSize();
         deskText.setText(person.getFirstname() + " " + person.getLastname() + " is dropping of 1 bag of " +
                 person.getBaggage().getWeight() + "kg. A baggage fee of £" +
-                        person.getBaggage().calculateOverCapacityPrice(person.getBaggage()) + " is due"
+                        person.getBaggage().calculateOverCapacityPrice(bookingBaggageSize) + " is due"
         );
     }
 
