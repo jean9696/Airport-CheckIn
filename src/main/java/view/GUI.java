@@ -9,6 +9,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -21,14 +22,16 @@ public class GUI extends JFrame {
 
 		// set up the title of the window
 		setTitle("model.entity.Booking view.GUI");
+		// set minimum window size
 		setMinimumSize(new Dimension(1400, 100));
 
-		// call the two functions that set up the view.GUI
+		// call the three functions that set up the view.GUI
 		setupNorthPanel(queueModel);
 		setupCenterPanel(desks);
 		setupSouthPanel(flightList);
 
 		//setDefaultCloseOperation(this.DO_NOTHING_ON_CLOSE);
+
 
 		// pack and set visible
 		pack();

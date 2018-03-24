@@ -32,11 +32,15 @@ public class Desk extends JPanel implements Observer {
             updateDesk((Passenger) arg);
         }
         else if (arg instanceof Boolean) {
-            /*if ((Boolean) arg == true) {
-                openDesk();
+            System.out.println("Here");
+            if ((Boolean) arg == true) {
+                setDeskText(closeText);
+                System.out.println("Opening Desk");
             } else {
-                closeDesk();
-            }*/
+                setDeskText(openText);
+                emptyDesk();
+                System.out.println("Closing Desk");
+            }
         }
         else {
             emptyDesk();
@@ -84,12 +88,14 @@ public class Desk extends JPanel implements Observer {
 
     private void openDesk() {
         desk.open();
-        deskButton.setText(closeText);
     }
 
     private void closeDesk() {
         desk.close();
-        emptyDesk();
-        deskButton.setText(openText);
+
+    }
+
+    private void setDeskText(String text) {
+        deskButton.setText(text);
     }
 }
