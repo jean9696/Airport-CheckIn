@@ -30,18 +30,16 @@ public class Desk extends JPanel implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
+        // Check for the type of argument to update the view accordingly
         if (arg instanceof Passenger) {
             updateDesk((Passenger) arg);
         }
         else if (arg instanceof Boolean) {
-            System.out.println("Here");
             if ((Boolean) arg == true) {
                 setDeskText(closeText);
-                System.out.println("Opening Desk");
             } else {
                 setDeskText(openText);
                 emptyDesk();
-                System.out.println("Closing Desk");
             }
         }
         else {
@@ -74,6 +72,7 @@ public class Desk extends JPanel implements Observer {
     }
 
     private void setupButton() {
+        // Setup the button for opening and closing a desk
         deskButton.setText(closeText);
 
         deskButton.addActionListener(new ActionListener() {
@@ -95,7 +94,6 @@ public class Desk extends JPanel implements Observer {
 
     private void closeDesk() {
         desk.close();
-
     }
 
     private void setDeskText(String text) {

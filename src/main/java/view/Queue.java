@@ -50,12 +50,17 @@ public class Queue extends JPanel implements Observer {
 
     public JPanel setupQueue(LinkedList<Passenger> passengers) {
         passengerArea.setText("");
-        for (Passenger passenger : passengers) {
-            passengerArea.append(passenger.getBookingId().toString() + " ");
-            passengerArea.append(passenger.getFirstname() + " ");
-            passengerArea.append(passenger.getLastname() + ", ");
-            passengerArea.append("Baggage: " + passenger.getBaggage().getWeight().toString() + "kg, ");
-            passengerArea.append(passenger.getBaggage().getVolume().toString() + " liters\n");
+        try {
+            for (Passenger passenger : passengers) {
+                passengerArea.append(passenger.getBookingId().toString() + " ");
+                passengerArea.append(passenger.getFirstname() + " ");
+                passengerArea.append(passenger.getLastname() + ", ");
+                passengerArea.append("Baggage: " + passenger.getBaggage().getWeight().toString() + "kg, ");
+                passengerArea.append(passenger.getBaggage().getVolume().toString() + " liters\n");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+            e.printStackTrace();
         }
         return queuePanel;
     }
