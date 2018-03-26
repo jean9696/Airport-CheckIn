@@ -8,6 +8,7 @@ import model.entity.Passenger;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -21,14 +22,13 @@ public class GUI extends JFrame {
 		// set up the title of the window
 		setTitle("Airport");
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
 		setMinimumSize(new Dimension(1400, 100));
 
-		// call the two functions that set up the view.GUI
+		// call the three functions that set up the view.GUI
 		setupNorthPanel(queueModel);
 		setupCenterPanel(desks);
 		setupSouthPanel(flightList);
-
-		//setDefaultCloseOperation(this.DO_NOTHING_ON_CLOSE);
 
 		// pack and set visible
 		pack();
@@ -38,9 +38,10 @@ public class GUI extends JFrame {
 
 	private void setupNorthPanel(PassengerQueue queueModel){
 	    JPanel queuePanel = new JPanel();
+	    // Use GridBagLayout for north panel to have different sized panels inside
 	    GridBagLayout queueLayout = new GridBagLayout();
-	    //queuePanel.setLayout(new GridLayout(2, 1));
 	    queuePanel.setLayout(queueLayout);
+	    // Setup GridBagConstraints for the queue panel
 	    GridBagConstraints gbc = new GridBagConstraints();
 	    gbc.gridx = 0;
 	    gbc.gridy = 0;
@@ -60,6 +61,7 @@ public class GUI extends JFrame {
 
     private void setupCenterPanel(LinkedList<CheckInDesk> checkInDesks) {
         JPanel desksPanel = new JPanel();
+        // Allow setup of multiple deksks
         desksPanel.setLayout(new GridLayout(1, checkInDesks.size()));
 		for (CheckInDesk deskModel : checkInDesks) {
 			Desk deskView = new Desk( "Desk " + deskModel.getId(), deskModel);
@@ -71,6 +73,7 @@ public class GUI extends JFrame {
 
 	private void setupSouthPanel(HashMap<String, Flight> flightList) {
 	    JPanel flightsPanel = new JPanel();
+	    //Allow setup of multiple flights
 	    flightsPanel.setLayout(new GridLayout(1, flightList.size()));
 		flightsPanel.setPreferredSize(new Dimension(getWidth(), 100));
 		for (model.entity.Flight flight : flightList.values()) {
@@ -78,13 +81,6 @@ public class GUI extends JFrame {
 			flightsPanel.add(flightView.setupFlightPanel());
 		}
 	    this.add(flightsPanel, BorderLayout.SOUTH);
-    }
-
-	/**
-	 * Close the view.GUI
-	 */
-    public void close() {
-        this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
     }
 
 }
