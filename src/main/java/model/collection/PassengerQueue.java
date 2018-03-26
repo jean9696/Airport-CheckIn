@@ -47,7 +47,7 @@ public class PassengerQueue extends Observable implements Queue<Passenger> {
     public boolean add(Passenger passenger) {
         boolean reply = passengers.add(passenger);
         setChanged();
-        notifyObservers(passengers);
+        notifyObservers();
         return reply;
     }
 
@@ -55,7 +55,7 @@ public class PassengerQueue extends Observable implements Queue<Passenger> {
     public boolean remove(Object o) {
         boolean reply = passengers.remove(o);
         setChanged();
-        notifyObservers(passengers);
+        notifyObservers();
         return reply;
     }
 
@@ -112,5 +112,9 @@ public class PassengerQueue extends Observable implements Queue<Passenger> {
     @Override
     public Passenger peek() {
         return passengers.peek();
+    }
+
+    public LinkedList<Passenger> getPassengers() {
+        return this.passengers;
     }
 }

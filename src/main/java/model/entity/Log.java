@@ -22,7 +22,7 @@ public class Log {
      * @param text Text to be added
      * @return The updated logReport string
      */
-    public String addToLog(String text) {
+    public synchronized String addToLog(String text) {
         logReport += getCurrentTimeStamp() + ": " + text + "\n";
         return logReport;
     }

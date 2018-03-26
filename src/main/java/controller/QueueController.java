@@ -35,10 +35,10 @@ public class QueueController {
      * @param passengers
      * Simulate the passenger arrival asynchronously
      */
-    public void simulatePassengerArrival(final PassengerList passengers) {
+    public void simulatePassengerArrival(final PassengerList passengers, final Boolean[] isRunning) {
         new Thread(new Runnable() {
             public void run() {
-                while (!passengers.isEmpty()) {
+                while (!passengers.isEmpty() && isRunning[0]) {
                     int index = new Random().nextInt(passengers.size());
                     Passenger randomPassenger = passengers.get(index);
                     addPassengerToQueue(randomPassenger);
